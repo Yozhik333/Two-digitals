@@ -1,0 +1,35 @@
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 1em;
+	font-family: "Poppins", sans-serif;
+	user-select: none;
+}
+
+.btn-black {
+	background: $accent;
+	color: #ffffff;
+	height: 3.5em;
+	padding: 0 2.5em;
+
+	position: relative;
+	background-image: linear-gradient(90deg, #fa406d 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 5.5s cubic-bezier(0, 0.83, 0.58, 1);
+	&:hover {
+		background-position: 0;
+	}
+}
+
+.btn-pink {
+	background: $pink;
+	color: #ffffff;
+	height: 3.5em;
+	padding: 0 2.5em;
+	transition: background 0.2s ease-out;
+	&:hover {
+		background: lighten($pink, 4%);
+	}
+}

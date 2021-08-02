@@ -25,44 +25,104 @@
 	<div class="wrapper">
 		<div class="wrapper-in">
 
-			<!--#echo var="logonon" -->
-
 			<header class="header">
+
+				<!--#echo var="backForLogo" -->
+
 				<div class="header__container">
 					<a href="/" class="header__logo"><img src="images/dist/header/main-logo.svg" alt="Logo"></a>
 					<div class="header__menu menu">
-						<div class="menu__icon">
-							<span></span>
-						</div>
 						<nav class="menu__body">
+							<a href="/" class="header__logo-menu"><img src="images/dist/header/main-logo-black.svg" alt="Logo"></a>
 							<ul class="menu__list">
-								<li><a href="" class="menu__link">Кейсы</a></li>
-								<li>
-									<a href="" class="menu__link">Услуги</a>
-									<ul class="menu__sub-list">
-										<div class="icon-cover-svg">
-											<img src="images/dist/header/mouse.svg" alt="Kek">
+								<li class="menu__link"><a href="">Кейсы</a></li>
+								<li class="menu__link">
+									<button href="#" class="menu__arrow">Услуги</button>
+									<div class="menu__sub-body">
+										<div class="menu__sub-list-wrap">
+											<div class="icon-cover-sub-list-svg">
+												<img src="images/dist/header/mouse.png" alt="Kek">
+											</div>
+											<h6 class="menu__arrow-sub">Автоматизированный маркетинг</h6>
+											<span class="menu__sub-sub-title">9 видов услуг</span>
+											<ul class="menu__sub-list">
+
+												<li class="menu__sub-link"><a href="#">Контекстная реклама</a></li>
+												<li class="menu__sub-link"><a href="#">Таргетированная реклама</a></li>
+												<li class="menu__sub-link"><a href="#">Ведение социальных сетей</a></li>
+												<li class="menu__sub-link"><a href="#">SEO продвижение</a></li>
+												<li class="menu__sub-link"><a href="#">EMAIL маркетинг</a></li>
+												<li class="menu__sub-link"><a href="#">Yandex Dzen</a></li>
+												<li class="menu__sub-link"><a href="#">CRM</a></li>
+												<li class="menu__sub-link"><a href="#">Управление репутацией в интернете</a></li>
+												<li class="menu__sub-link"><a href="#">Продвижение мобильных приложений</a></li>
+												<li class="menu__sub-link"><a href="#">Блог</a></li>
+											</ul>
 										</div>
-										<h6>Автоматизированный маркетинг</h6>
-										<span>9 видов услуг</span>
-										<li><a href="#" class="menu__sub-link">Контекстная реклама</a></li>
-									</ul>
-									<ul class="menu__sub-list">
-										<div class="icon-cover-svg">
-											<img src="images/dist/header/mouse.svg" alt="Kek">
+										<div class="menu__sub-list-wrap">
+											<div class="icon-cover-sub-list-svg">
+												<img src="images/dist/header/basket.png" alt="Kek">
+											</div>
+											<h6 class="menu__arrow-sub">Разработка и дизайн</h6>
+											<span class="menu__sub-sub-title">7 видов услуг</span>
+											<ul class="menu__sub-list">
+												<li class="menu__sub-link"><a href="#">Создание сайтов</a></li>
+												<li class="menu__sub-link"><a href="#">Создание мобильных приложений</a></li>
+												<li class="menu__sub-link"><a href="#">Веб-дизайн</a></li>
+												<li class="menu__sub-link"><a href="#">Брендинг</a></li>
+												<li class="menu__sub-link"><a href="#">Разработка логотипов</a></li>
+												<li class="menu__sub-link"><a href="#">Фирменный стиль</a></li>
+												<li class="menu__sub-link"><a href="#">Нейминг</a></li>
+											</ul>
 										</div>
-										<h6>Автоматизированный маркетинг</h6>
-										<span>9 видов услуг</span>
-										<li><a href="#" class="menu__sub-link">Контекстная реклама</a></li>
-									</ul>
+										<div class="menu__sub-body--inside">
+											<div class="menu__sub-list-wrap">
+												<div class="icon-cover-sub-list-svg">
+													<img src="images/dist/header/calendar.png" alt="Basket">
+												</div>
+												<h6 class="menu__arrow-sub">Обучение</h6>
+												<span class="menu__sub-sub-title">5 направлений</span>
+												<ul class="menu__sub-list">
+													<li class="menu__sub-link"><a href="#">Обучение трагетированной рекламе</a></li>
+													<li class="menu__sub-link"><a href="#">Обучение SEO + контекст</a></li>
+													<li class="menu__sub-link"><a href="#">Обучение SMM + создание личного бренда</a></li>
+													<li class="menu__sub-link"><a href="#">Консультация с нашими специалистами</a></li>
+													<li class="menu__sub-link"><a href="#">Консультация с владельцами диджитал агентства</a></li>
+												</ul>
+											</div>
+											<div class="menu__sub-list-wrap">
+												<div class="icon-cover-sub-list-svg">
+													<img src="images/dist/header/complex.png" alt="Kek">
+												</div>
+												<h6 class="menu__arrow-sub">Комплексные решения</h6>
+												<span class="menu__sub-sub-title">3 пакета</span>
+												<ul class="menu__sub-list">
+													<li class="menu__sub-link"><a href="#">Complex Light</a></li>
+													<li class="menu__sub-link"><a href="#">Complex Medium</a></li>
+													<li class="menu__sub-link"><a href="#">Complex Pro</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- /.menu__sub-body--inside -->
+									</div>
+									<!-- /.menu__sub-body -->
 								</li>
-								<li><a href="" class="menu__link">Стоимость</a></li>
-								<li><a href="" class="menu__link">О нас</a></li>
-								<li><a href="" class="menu__link">Статьи</a></li>
-								<li><a href="" class="menu__link">Контакты</a></li>
+								<li class="menu__link"><a href="">Стоимость</a></li>
+								<li class="menu__link"><a href="">О нас</a></li>
+								<li class="menu__link"><a href="">Статьи</a></li>
+								<li class="menu__link"><a href="">Контакты</a></li>
 							</ul>
 						</nav>
 					</div>
+					<!-- /.header__menu -->
+
+					<div class="header__call">
+						<!--#echo var="phone-number" -->
+						<!--#echo var="btn" -->
+						<!--#echo var="iconMenu" -->
+					</div>
+					<!-- /.header__call -->
+
 				</div>
 				<!-- /.header__container -->
 			</header>
