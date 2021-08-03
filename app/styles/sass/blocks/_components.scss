@@ -26,11 +26,33 @@
 .btn-pink {
 	background: $pink;
 	color: #ffffff;
+	width: max-content;
 	height: 3.5em;
-	padding: 0 2.5em;
+	padding: 1em 2.5em;
+	border: 0;
+	text-align: center;
 	transition: background 0.2s ease-out;
 	&:hover {
 		background: lighten($pink, 4%);
+		color: #fff;
+	}
+}
+
+.btn-disabled {
+	border: 0.2em solid $accent;
+	background-color: transparent;
+	width: 4em;
+	height: 4em;
+	border-radius: 0.5em;
+	display: block;
+	&::after {
+		content: "";
+		background: url("../images/dist/icons/arrow-down-dark.svg");
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: block;
+		height: 100%;
 	}
 }
 
@@ -133,8 +155,38 @@
 		z-index: -1;
 		content: "";
 	}
+	&-small {
+		position: relative;
+		padding: 7.5em 5.875em;
+		&::before {
+			background: linear-gradient(263.56deg, #3b3d47 5.71%, #232326 98.02%);
+			border-radius: 2.5em;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			z-index: -1;
+			content: "";
+		}
+	}
+	@media (max-width: 1023px) {
+		&-small {
+			@include paddingLeft(32px, 90px, 578px, 1023px);
+			@include paddingRight(32px, 90px, 578px, 1023px);
+			@include paddingTop(79px, 120px, 578px, 1023px);
+			@include paddingBottom(77px, 120px, 578px, 1023px);
+		}
+	}
 }
 .lines {
 	position: absolute;
 	width: 100%;
+	user-select: none;
+	pointer-events: none;
+}
+.cloud {
+	position: absolute;
+	width: 10.125em;
+	height: 7.5em;
 }

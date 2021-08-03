@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	// Main-page. Section Steps, slider
+	// main-page. Section Steps, slider
 
 	const stepsWork = new Swiper('#stepsWork', {
 		loop: false,
@@ -94,6 +94,30 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 			1024: {
 				slidesPerView: 3,
+			},
+		}
+	});
+
+	// main-page. Section blogSlider, slider
+
+	const blogSlider = new Swiper('#blogSlider', {
+		loop: false,
+		slidesPerView: 2,
+		spaceBetween: 110,
+		navigation: {
+			nextEl: '.blog-slider-next',
+			prevEl: '.blog-slider-prev',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			578: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			1024: {
+				slidesPerView: 2,
 			},
 		}
 	});

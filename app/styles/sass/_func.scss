@@ -36,3 +36,56 @@
 		font-size: $f-max;
 	}
 }
+
+@mixin paddingLeft($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+	padding-left: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			padding-left: $fallback;
+		}
+		padding-left: fs($f-min, $f-max, $w-min, $w-max, px);
+	}
+	@media (min-width: $w-max) {
+		padding-left: $f-max;
+	}
+}
+@mixin paddingRight($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+	padding-right: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			padding-right: $fallback;
+		}
+		padding-right: fs($f-min, $f-max, $w-min, $w-max, px);
+	}
+	@media (min-width: $w-max) {
+		padding-right: $f-max;
+	}
+}
+@mixin paddingTop($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+	padding-top: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			padding-top: $fallback;
+		}
+		padding-top: fs($f-min, $f-max, $w-min, $w-max, px);
+	}
+	@media (min-width: $w-max) {
+		padding-top: $f-max;
+	}
+}
+@mixin paddingBottom($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+	padding-bottom: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			padding-bottom: $fallback;
+		}
+		padding-bottom: fs($f-min, $f-max, $w-min, $w-max, px);
+	}
+	@media (min-width: $w-max) {
+		padding-bottom: $f-max;
+	}
+}
