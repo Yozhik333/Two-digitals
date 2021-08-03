@@ -118,3 +118,23 @@
 		background-position: center;
 	}
 }
+
+.back-dark {
+	position: relative;
+	padding: 7.5625em 5.5625em;
+	&::before {
+		background: $accent;
+		border-radius: 2em;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		z-index: -1;
+		content: "";
+	}
+}
+.lines {
+	position: absolute;
+	width: 100%;
+}

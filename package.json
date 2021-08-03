@@ -36,6 +36,7 @@
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
+		"aos": "^2.3.4",
 		"swiper": "^6.8.0"
 	}
 }

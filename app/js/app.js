@@ -1,7 +1,10 @@
+import Aos from 'aos';
 import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
 document.addEventListener('DOMContentLoaded', () => {
+
+	Aos.init();
 
 	// IsMobile start
 
