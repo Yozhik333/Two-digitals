@@ -74,6 +74,85 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	// Аккордион
+
+	let accr = document.querySelectorAll('.accordion__control');
+
+	if (accr.length > 0) {
+		for (let index = 0; index < accr.length; index++) {
+			const accrOpen = accr[index];
+			accrOpen.addEventListener("click", function (e) {
+				accrOpen.parentElement.classList.toggle('open');
+				const self = document.querySelector('.accordion');
+				const control = document.querySelector('.accordion__control');
+				const content = document.querySelector('.accordion__content');
+
+				// если открыт аккордеон
+				if (self.classList.contains('open')) {
+					control.setAttribute('aria-expanded', true);
+					content.setAttribute('aria-hidden', false);
+					content.style.maxHeight = content.scrollHeight + 'px';
+				} else {
+					control.setAttribute('aria-expanded', false);
+					content.setAttribute('aria-hidden', true);
+					content.style.maxHeight = null;
+				}
+			});
+		}
+	}
+
+	//let accr = document.querySelectorAll('.accordion__control');
+
+	//if (accr.length > 0) {
+	//	for (let index = 0; index < accr.length; index++) {
+	//		const accrOpen = accr[index];
+	//		accrOpen.addEventListener("click", function (e) {
+	//			accrOpen.parentElement.classList.toggle('open');
+	//			const self = document.querySelector('.accordion');
+	//			const control = document.querySelector('.accordion__control');
+	//			const content = document.querySelector('.accordion__content');
+
+	//			// если открыт аккордеон
+	//			if (self.classList.contains('open')) {
+	//				control.setAttribute('aria-expanded', true);
+	//				content.setAttribute('aria-hidden', false);
+	//				content.style.maxHeight = content.scrollHeight + 'px';
+	//			} else {
+	//				control.setAttribute('aria-expanded', false);
+	//				content.setAttribute('aria-hidden', true);
+	//				content.style.maxHeight = null;
+	//			}
+	//		});
+	//	}
+	//}
+
+	// !Аккордион-убрать
+	//const accordions = document.querySelectorAll('.accordion');
+
+	//accordions.forEach(el => {
+	//	el.addEventListener('click', (e) => {
+	//		const self = e.currentTarget;
+	//		const control = self.querySelector('.accordion__control');
+	//		const content = self.querySelector('.accordion__content');
+
+	//		self.classList.toggle('open');
+
+	//		// если открыт аккордеон
+	//		if (self.classList.contains('open')) {
+	//			control.setAttribute('aria-expanded', true);
+	//			content.setAttribute('aria-hidden', false);
+	//			content.style.maxHeight = content.scrollHeight + 'px';
+	//		} else {
+	//			control.setAttribute('aria-expanded', false);
+	//			content.setAttribute('aria-hidden', true);
+	//			content.style.maxHeight = null;
+	//		}
+	//	});
+	//});
+
+
+	//! Next sliders
+
 	// main-page. Section Steps, slider
 
 	const stepsWork = new Swiper('#stepsWork', {
@@ -121,5 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 		}
 	});
+
+	//!
 
 })

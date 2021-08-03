@@ -56,6 +56,29 @@
 	}
 }
 
+.icon-cover-img {
+	//flex: 0 0 33.333%; // Навсякий случай для резинности ширины
+	//min-height: 10rem; // Навсякий случай для статичности высоты при отсутсвии контента
+	//padding: 0 0 60% 0; // Все заметки в основном под мобилку
+	//overflow: hidden; // Для заметки
+	//position: relative; // Для заметки
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		//position: absolute; // Для заметки
+		//top: 0; // Для заметки
+		//left: 0; // Для заметки
+	}
+}
+.icon-cover-svg {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
 .anchor {
 	display: block;
 	margin-bottom: 6.25em;
@@ -72,6 +95,33 @@
 	}
 	@media (max-width: 1023px) {
 		display: none;
+	}
+}
+
+.title {
+	text-transform: uppercase;
+	font-size: 1.25em;
+	font-weight: bold;
+	line-height: 100%;
+	margin: 0 0 1.375em;
+	&-pink {
+		color: $pink;
+		&-line {
+			position: relative;
+			padding-left: 2.3em;
+			color: $pink;
+			&::before {
+				background-color: $pink;
+				height: 0.125em;
+				width: 1.3em;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				display: block;
+				position: absolute;
+				content: "";
+			}
+		}
 	}
 }
 
