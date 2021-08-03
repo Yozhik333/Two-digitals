@@ -1,0 +1,120 @@
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 1em;
+	font-family: "Poppins", sans-serif;
+	user-select: none;
+}
+
+.btn-black {
+	background: $accent;
+	color: #ffffff;
+	height: 3.5em;
+	padding: 0 2.5em;
+
+	position: relative;
+	background-image: linear-gradient(90deg, #fa406d 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 5.5s cubic-bezier(0, 0.83, 0.58, 1);
+	&:hover {
+		background-position: 0;
+	}
+}
+
+.btn-pink {
+	background: $pink;
+	color: #ffffff;
+	height: 3.5em;
+	padding: 0 2.5em;
+	transition: background 0.2s ease-out;
+	&:hover {
+		background: lighten($pink, 4%);
+	}
+}
+
+.anchor {
+	display: block;
+	margin-bottom: 6.25em;
+	margin-left: 9.375em;
+	letter-spacing: -0.025em;
+	color: $textcolor;
+	width: max-content;
+	img {
+		margin-right: 1.1875em;
+		width: 1.5em;
+	}
+	&:hover {
+		color: $grey-light;
+	}
+	@media (max-width: 1023px) {
+		display: none;
+	}
+}
+
+.pink-link {
+	color: $textcolor;
+	line-height: 1.5em;
+	padding-right: 1em;
+	&::after {
+		transform: rotate(45deg);
+		margin: 0.35em 0 0 0.5em;
+		width: 0.6em;
+		height: 0.6em;
+		transition: border-bottom 0.1s ease-out, color 0.3s ease, border-right 0.1s ease-out, color 0.3s ease,
+			opacity 0.1s ease-out;
+		border-top: 0.15em solid $textcolor;
+		border-right: 0.15em solid $textcolor;
+		display: inline-block;
+		position: absolute;
+		content: "";
+	}
+	&:hover {
+		color: $pink;
+		&::after {
+			border-top-color: $pink;
+			border-right-color: $pink;
+		}
+	}
+}
+
+.slider-prev,
+.slider-next {
+	position: static;
+	background-color: $pink;
+	width: 4em;
+	height: 4em;
+	border-radius: 0.5em;
+	&::after {
+		content: "";
+		background: url("../images/dist/icons/arrow-down-light.svg");
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+	}
+}
+.slider-prev {
+	&::after {
+		transform: rotate(-180deg);
+	}
+	&.swiper-button-disabled {
+		&::after {
+			transform: rotate(-180deg);
+		}
+	}
+}
+.slider-next.swiper-button-disabled,
+.slider-prev.swiper-button-disabled {
+	border: 0.2em solid $accent;
+	background-color: transparent;
+	opacity: 1;
+	&::after {
+		background: url("../images/dist/icons/arrow-down-dark.svg");
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

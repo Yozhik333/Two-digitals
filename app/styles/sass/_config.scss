@@ -7,6 +7,7 @@ $grey-light: #e3e6e9;
 $pink: #fa406d;
 $lineheight: 1.6; // Document Line Height
 $userfont: "Poppins", sans-serif; // User Font Family
+$montserrat: "Montserrat", sans-serif;
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -19,6 +20,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 //@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import "node_modules/swiper/swiper-bundle";
 
 // FONTS LOAD SECTION
 
@@ -106,6 +108,16 @@ body._lock {
 	margin: 0 auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $montserrat;
+	color: $accent;
+	margin-bottom: 0;
+}
 a {
 	text-decoration: none;
 	font-family: $userfont;

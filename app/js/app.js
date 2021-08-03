@@ -1,3 +1,6 @@
+import Swiper, { Navigation } from 'swiper';
+Swiper.use([Navigation]);
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	// IsMobile start
@@ -67,5 +70,29 @@ document.addEventListener('DOMContentLoaded', () => {
 			menuBody.classList.toggle('_active');
 		});
 	}
+
+	// Main-page. Section Steps, slider
+
+	const stepsWork = new Swiper('#stepsWork', {
+		loop: false,
+		slidesPerView: 3,
+		spaceBetween: 110,
+		navigation: {
+			nextEl: '.steps-work-next',
+			prevEl: '.steps-work-prev',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			578: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			1024: {
+				slidesPerView: 3,
+			},
+		}
+	});
 
 })
