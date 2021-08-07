@@ -629,3 +629,9 @@
 		}
 	}
 }
+
+.non-active {
+	a {
+		color: $grey-light !important;
+	}
+}
