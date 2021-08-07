@@ -22,6 +22,21 @@
 		background-position: 0;
 	}
 }
+.btn-white {
+	background: #fff;
+	color: $accent;
+	height: 3.5em;
+	padding: 0 2.5em;
+
+	position: relative;
+	background-image: linear-gradient(90deg, #fa406d 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 5.5s cubic-bezier(0, 0.83, 0.58, 1);
+	&:hover {
+		background-position: 0;
+	}
+}
 
 .btn-pink {
 	background: $pink;
@@ -239,4 +254,79 @@
 	position: absolute;
 	width: 10.125em;
 	height: 7.5em;
+}
+
+.cubes {
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+}
+
+.black-elips-small {
+	width: 2em;
+	height: 2em;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -2.1875em;
+	border-radius: 50%;
+	background: $accent;
+	position: absolute;
+}
+
+.black-elips-big {
+	width: 63.0625em;
+	height: 63.0625em;
+	right: -28.5em;
+	top: -18.8125em;
+	border-radius: 50%;
+	background: $accent;
+	z-index: -1;
+	position: absolute;
+	@media (max-width: 1023px) {
+		width: 43.0625em;
+		height: 43.0625em;
+		top: -22.8125em;
+	}
+	@media (max-width: 578px) {
+		top: -30.8125em;
+	}
+}
+
+.line-cube {
+	position: relative;
+	display: inline-block;
+	margin-left: -1.9em;
+	margin-right: 0.8em;
+	width: 1.43em;
+	height: 1.21em;
+	font-size: 0.7em;
+	span {
+		width: 1em;
+		height: 0.5em;
+		position: absolute;
+		top: -0.02em;
+		left: 0.17em;
+		//transform: translateX(-50%) rotateX(38deg) rotate(-12deg) skewX(48deg) skewY(-12.8deg);
+		transform: rotateX(29deg) rotate(-12deg) skewX(48deg) skewY(-12.8deg);
+		background: #fed0da;
+		border-radius: 0.01em;
+	}
+	&::before,
+	&::after {
+		width: 0.68em;
+		height: 0.63em;
+		position: absolute;
+		bottom: 0;
+		background: $accent;
+		border-radius: 0.01em;
+		content: "";
+	}
+	&::before {
+		left: 0;
+		transform: rotate(25deg) skew(25deg);
+	}
+	&::after {
+		right: 0;
+		transform: rotate(335deg) skew(-25deg);
+	}
 }

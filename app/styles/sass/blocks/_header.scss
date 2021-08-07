@@ -379,6 +379,13 @@
 		font-family: "Poppins", sans-serif;
 	}
 }
+.phone-light {
+	a {
+		display: block;
+		color: #fff;
+		font-family: "Poppins", sans-serif;
+	}
+}
 
 @media (max-width: 1023px) {
 	.phone-number {
@@ -388,12 +395,25 @@
 		a {
 			width: 3em;
 			height: 3em;
+			border-radius: 0.75em;
+		}
+	}
+	.phone-dark {
+		a {
 			background: $accent;
 			background-image: url("../images/dist/header/iconly.svg");
 			background-repeat: no-repeat;
 			background-size: 50%;
 			background-position: center;
-			border-radius: 0.75em;
+		}
+	}
+	.phone-light {
+		a {
+			background: $pink;
+			background-image: url("../images/dist/header/iconly.svg");
+			background-repeat: no-repeat;
+			background-size: 50%;
+			background-position: center;
 		}
 	}
 	.menu__icon {
@@ -443,6 +463,14 @@
 		}
 		&--border-dark {
 			background: transparent;
+			border: 0.02em solid #000;
+			&::after,
+			&::before {
+				background-color: #000;
+			}
+		}
+		&--border-light {
+			background: #fff;
 			border: 0.02em solid #000;
 			&::after,
 			&::before {

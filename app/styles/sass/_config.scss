@@ -140,6 +140,15 @@ h6 {
 	margin-bottom: 0;
 }
 
+.h1-92 {
+	font-weight: bold;
+	font-size: 5.75em;
+	line-height: 110%;
+	max-width: 8em;
+	.dot-pink {
+		margin-left: -0.3em;
+	}
+}
 .h2-72 {
 	font-size: 4.5em;
 	line-height: 100%;
@@ -176,7 +185,17 @@ h6 {
 	font-size: 1.5em;
 	line-height: 120%;
 }
+.h3-28 {
+	font-weight: 600;
+	font-size: 1.75em;
+	line-height: 120%;
+	letter-spacing: -0.025em;
+}
 @media (max-width: 1023px) {
+	.h1-92 {
+		@include fluidFontSize(32px, 92px, 320px, 1023px);
+		max-width: none;
+	}
 	.h2-72 {
 		@include fluidFontSize(32px, 72px, 320px, 1023px);
 	}

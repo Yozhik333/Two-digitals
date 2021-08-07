@@ -1,10 +1,15 @@
 import Aos from 'aos';
+import IMask from 'imask';
 import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	Aos.init();
+	Aos.init({
+		duration: 1000,
+		easing: 'ease-in-out-back',
+		anchorPlacement: 'top-top'
+	});
 
 	// IsMobile start
 
@@ -76,30 +81,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Аккордион
 
-	let accr = document.querySelectorAll('.accordion__control');
+	// получить все аккардионы на странице
+	const accordionList = document.querySelectorAll('.accordion__list')
+	accordionList.forEach(list => list.addEventListener('click', accordionListClickHandler))
 
-	if (accr.length > 0) {
-		for (let index = 0; index < accr.length; index++) {
-			const accrOpen = accr[index];
-			accrOpen.addEventListener("click", function (e) {
-				accrOpen.parentElement.classList.toggle('open');
-				const self = document.querySelector('.accordion');
-				const control = document.querySelector('.accordion__control');
-				const content = document.querySelector('.accordion__content');
+	function accordionListClickHandler(e) {
+		const accordion = e.target.closest('.accordion')
+		if (!accordion) {
+			return // если клик не по аккордиону, тогда ничего не делаем
+		}
 
-				// если открыт аккордеон
-				if (self.classList.contains('open')) {
-					control.setAttribute('aria-expanded', true);
-					content.setAttribute('aria-hidden', false);
-					content.style.maxHeight = content.scrollHeight + 'px';
-				} else {
-					control.setAttribute('aria-expanded', false);
-					content.setAttribute('aria-hidden', true);
-					content.style.maxHeight = null;
-				}
-			});
+		if (!e.target.closest('.accordion__control')) {
+			return // если клик не по контролу, тогда ничего не делаем
+		}
+
+		toggleAccordion(accordion)
+	}
+
+	function toggleAccordion(accordion) {
+		const control = accordion.querySelector('.accordion__control')
+		const content = accordion.querySelector('.accordion__content')
+		const isOpen = accordion.classList.contains('open')
+
+		if (isOpen) {
+			accordion.classList.remove('open')
+			control.setAttribute('aria-expanded', false);
+			content.setAttribute('aria-hidden', true);
+			content.style.maxHeight = null;
+		} else {
+			accordion.classList.add('open')
+			control.setAttribute('aria-expanded', true);
+			content.setAttribute('aria-hidden', false);
+			content.style.maxHeight = content.scrollHeight + 'px';
 		}
 	}
+
+	//let accordionsMain = document.querySelectorAll('.accordion__control');
+	//if (accordionsMain.length > 0) {
+	//	for (let index = 0; index < accordionsMain.length; index++) {
+	//		const accordionMain = accordionsMain[index];
+	//		accordionMain.addEventListener("click", function (e) {
+	//			accordionMain.parentElement.classList.toggle('open');
+	//			const content = this.nextElementSibling;
+	//			if (accordionMain.parentElement.classList.contains('open')) {
+	//				accordionMain.setAttribute('aria-expanded', true);
+	//				content.setAttribute('aria-hidden', false);
+	//				content.style.maxHeight = content.scrollHeight + 'px';
+	//			}
+	//			else {
+	//				accordionMain.setAttribute('aria-expanded', false);
+	//				content.setAttribute('aria-hidden', true);
+	//				content.style.maxHeight = null;
+	//			}
+	//		});
+	//	}
+	//}
 
 	//let accr = document.querySelectorAll('.accordion__control');
 
@@ -126,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	//	}
 	//}
 
-	// !Аккордион-убрать
+	// !Аккордион
 	//const accordions = document.querySelectorAll('.accordion');
 
 	//accordions.forEach(el => {
@@ -135,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	//		const control = self.querySelector('.accordion__control');
 	//		const content = self.querySelector('.accordion__content');
 
-	//		self.classList.toggle('open');
+	//		self.parentElement.classList.toggle('open');
 
 	//		// если открыт аккордеон
 	//		if (self.classList.contains('open')) {

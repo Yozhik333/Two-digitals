@@ -1,0 +1,277 @@
+.elips-for-logo {
+	position: absolute;
+	z-index: -1;
+	width: 25.3125em;
+	height: 25.3125em;
+	left: -12.4375em;
+	top: -12.5em;
+	background: #fed0da;
+	border-radius: 50%;
+	mix-blend-mode: normal;
+	user-select: none;
+	@media (max-width: 1023px) {
+		top: -16em;
+	}
+}
+
+.complex-main-block-illustration {
+	width: 65.125em;
+	height: 46.25em;
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	right: -12.5em;
+	top: -12em;
+	z-index: -1;
+	@media (max-width: 1023px) {
+		top: -7em;
+	}
+	@media (max-width: 578px) {
+		top: -3.5em;
+		right: -7.5em;
+		width: 45.125em;
+		height: 31.25em;
+	}
+}
+
+.complex-main-block {
+	position: relative;
+}
+.pink-elips-medium {
+	width: 9em;
+	height: 9em;
+	left: 50%;
+	top: -4.8125em;
+	background: #f9e3e8;
+	border-radius: 50%;
+	position: absolute;
+	z-index: -2;
+}
+.pink-elips-small {
+	width: 3em;
+	height: 3em;
+	left: 2.5625em;
+	top: 15.5em;
+	background: #f9e3e8;
+	border-radius: 50%;
+	position: absolute;
+	z-index: -1;
+	@media (max-width: 1023px) {
+		top: 30em;
+	}
+	@media (max-width: 578px) {
+		top: 22em;
+		left: 0.5em;
+	}
+}
+
+// Complex-cards
+
+.complex-cards-wrap {
+	margin: 5em 0 11em;
+	padding: 7em 0 0;
+	position: relative;
+	.pink-elips-medium {
+		width: 23.8125em;
+		height: 23.8125em;
+		background: #fff2f4;
+		left: -7.9375em;
+		top: -1.375em;
+	}
+	.pink-elips-small {
+		width: 17em;
+		height: 17em;
+		bottom: -13.75em;
+		right: -8.75em;
+		background: #fff2f4;
+		left: auto;
+		top: auto;
+	}
+}
+.complex-cards-title {
+	text-align: center;
+	max-width: 49em;
+	margin: 0 auto;
+	p {
+		margin: 2em 0 5.75em;
+	}
+	@media (max-width: 1023px) {
+		padding: 0 1em;
+		p {
+			margin: 1em 0 2.5em;
+		}
+	}
+}
+
+.complex__cards {
+	margin: 0 auto;
+	min-width: 70em;
+	display: flex;
+	justify-content: center;
+	&-card-wrap {
+		width: 26em;
+		padding: 0 1em;
+		&:nth-child(2) {
+			.complex__cards-card {
+				background: $accent;
+				h2 {
+					color: #fff;
+				}
+				.line-cube {
+					&::before,
+					&::after {
+						background: #fff;
+					}
+				}
+			}
+			.complex__cards-bottom {
+				p {
+					color: #fff;
+				}
+			}
+		}
+	}
+	&-card {
+		padding: 3em 2em 11em;
+		border: 0.1em solid $textcolor;
+		border-radius: 2em;
+		height: 100%;
+		width: 100%;
+		background: #fff;
+		position: relative;
+		h2 {
+			margin: 0 0 1em;
+			text-align: center;
+		}
+		ul {
+			li {
+				margin: 0 0 0.7em;
+				padding: 0 0.8125em 0 1.7em;
+				font-size: 1.125em;
+				color: $textcolor;
+				position: relative;
+				&::after {
+					right: 0;
+					position: absolute;
+					content: "\2192";
+				}
+			}
+		}
+	}
+	&-bottom {
+		position: absolute;
+		bottom: 2em;
+		left: 2em;
+		right: 2em;
+		p {
+			text-align: center;
+			color: $accent;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 600;
+			font-size: 1.75em;
+			line-height: 120%;
+			letter-spacing: -0.025em;
+			span {
+				font-size: 0.6em;
+				color: $textcolor;
+				font-weight: normal;
+			}
+		}
+		button {
+			display: block;
+			width: 100%;
+		}
+	}
+	@media (max-width: 1023px) {
+		flex-flow: wrap;
+		min-width: auto;
+		&-card {
+			&-wrap {
+				width: 50%;
+				&:last-child {
+					margin: 2em 0;
+				}
+			}
+		}
+		@media (max-width: 578px) {
+			&-card {
+				&-wrap {
+					width: 100%;
+					margin: 1em 0;
+					&:last-child {
+						margin: 1em 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.speachbubble {
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	z-index: -1;
+}
+
+.speachbubble-dark {
+	width: 6.125em;
+	height: 7.375em;
+	left: 4.5625em;
+	top: -2em;
+	@media (max-width: 578px) {
+		left: 2em;
+	}
+}
+.speachbubble-pink {
+	width: 5.8125em;
+	height: 6.125em;
+	top: 8.75em;
+	right: 2.5em;
+	@media (max-width: 1023px) {
+		top: auto;
+		bottom: 27%;
+		@media (max-width: 578px) {
+			right: 1em;
+			bottom: -9em;
+		}
+	}
+}
+.complex-cube-dark-1,
+.complex-cube-dark-1-2 {
+	width: 1.8125em;
+	height: 1.6875em;
+	transform: rotate(19.75deg);
+}
+.complex-cube-dark-1 {
+	left: 4em;
+	bottom: 13em;
+	@media (max-width: 578px) {
+		bottom: -2em;
+	}
+}
+.complex-cube-dark-1-2 {
+	right: 3.125em;
+	top: 20em;
+}
+.complex-cube-1 {
+	width: 3.96375em;
+	height: 3.67437em;
+	left: 16.0625em;
+	top: 12em;
+	transform: rotate(19.75deg);
+	@media (max-width: 578px) {
+		left: 1em;
+		top: 21em;
+	}
+}
+.complex-cube-1-2 {
+	width: 4.63063em;
+	height: 4.2925em;
+	top: 2em;
+	right: 12.875em;
+	transform: rotate(19.75deg);
+	@media (max-width: 578px) {
+		right: 1.875em;
+	}
+}

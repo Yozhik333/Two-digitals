@@ -3,6 +3,7 @@
 <!--#set var="phone-number" value="<div class='phone-number phone-dark'><a href='tel: +79009587658'><span>+7 900 958-76-58</span></a></div>" -->
 <!--#set var="btn" value="<button class='btn btn-black'>Заказать звонок</button>" -->
 <!--#set var="iconMenu" value="<div class='menu__icon menu__icon--border-dark'></div>" -->
+<!--#set var="headerLogo" value="<img src='images/dist/header/main-logo.svg' alt='Logo'>" -->
 <!--#include virtual="/parts/header.html" -->
 
 <main class="content">
@@ -36,12 +37,12 @@
 			<!-- /.new-era -->
 		</div>
 		<!-- /.container -->
-		<img class="art main_picker" src="images/dist/main-page/color-picker.png" alt="Пипетка">
-		<img class="art main_cube8-rotate" src="images/dist/cubes/cube8_rotate.png" alt="Куб">
-		<img class="art main_cube4" src="images/dist/cubes/cube4.png" alt="Куб">
-		<img class="art main_cube4-1" src="images/dist/cubes/cube4.png" alt="Куб">
-		<img class="art main_cube2" src="images/dist/cubes/cube2.png" alt="Куб">
-		<img class="art serv-img-cube2" src="images/dist/cubes/cube2.png" alt="Куб">
+		<img class="cubes main_picker" src="images/dist/main-page/color-picker.png" alt="Пипетка">
+		<img class="cubes main_cube8-rotate" src="images/dist/cubes/cube8_rotate.png" alt="Куб">
+		<img class="cubes main_cube4" src="images/dist/cubes/cube4.png" alt="Куб">
+		<img class="cubes main_cube4-1" src="images/dist/cubes/cube4.png" alt="Куб">
+		<img class="cubes main_cube2" src="images/dist/cubes/cube2.png" alt="Куб">
+		<img class="cubes serv-img-cube2" src="images/dist/cubes/cube2.png" alt="Куб">
 	</section>
 	<!-- /.new-era-wrap -->
 
@@ -116,8 +117,8 @@
 			<!-- /.main__cards -->
 		</div>
 		<!-- /.container -->
-		<img class="art main__cards-cube1" src="images/dist/cubes/cube5.png" alt="Куб">
-		<img class="art main__cards-cube2" data-aos="fade-up" src="images/dist/cubes/cube4.png" alt="Куб">
+		<img class="cubes main__cards-cube1" src="images/dist/cubes/cube5.png" alt="Куб">
+		<img class="cubes main__cards-cube2" data-aos="fade-up" src="images/dist/cubes/cube4.png" alt="Куб">
 	</section>
 	<!-- /.services-block-cards -->
 
@@ -253,9 +254,9 @@
 				</div>
 			</div>
 			<!-- /.clients -->
-			<img class="art main_cube3" data-aos="fade-up" src="images/dist/cubes/cube3.png" alt="Кубик">
-			<img class="art main_cube9" data-aos="fade-up" src="images/dist/cubes/cube9.png" alt="Кубик">
-			<img class="art main_cube2" data-aos="fade-up" src="images/dist/cubes/cube2.png" alt="Кубик">
+			<img class="cubes main_cube3" data-aos="fade-up" src="images/dist/cubes/cube3.png" alt="Кубик">
+			<img class="cubes main_cube9" data-aos="fade-up" src="images/dist/cubes/cube9.png" alt="Кубик">
+			<img class="cubes main_cube2" data-aos="fade-up" src="images/dist/cubes/cube2.png" alt="Кубик">
 			<img class="lines line-1" data-aos="fade-up" src="images/dist/components/line-1.png" alt="Линия">
 		</div>
 		<!-- /.container -->
@@ -350,106 +351,20 @@
 	<!-- /.main-faq -->
 
 	<section class="go-to-about-wrap">
-		<div class="container back-dark-small">
-			<div class="go-to-about">
-				<div class="go-to-about__text">
-					<h2 data-aos="fade-right">Хотите узнать больше о Two Digitals?</h2>
-					<p data-aos="fade-up">Перейти в раздел “О нас” и прочитать историю создания компании</p>
-					<a data-aos="fade-up" href="#" class="btn btn-pink">Узнать подробнее</a>
-				</div>
-				<div class="go-to-about__img">
-					<img src="images/dist/main-page/group-calendar.png" alt="Календарь">
-				</div>
-			</div>
-			<!-- /.go-to-about -->
-			<img class="cloud cloud-1" data-aos="zoom-in" src="images/dist/components/cloud.png" alt="Облако">
-			<img class="cloud cloud-2" data-aos="zoom-in" src="images/dist/components/cloud.png" alt="Облако">
-		</div>
-		<!-- /.container -->
+		<!--#include virtual="/parts/about-banner.html" -->
 	</section>
 	<!-- /.go-to-about -->
 
-	<section class="blog-slider-wrap">
-		<div class="container">
+	<!--#include virtual="/parts/blog-slider.html" -->
 
-			<div class="blog-slider__head">
-				<h4 class="title title-pink">Наш блог</h4>
-				<div class="blog-slider__control">
-					<div class="blog-slider__heading">
-						<h2>Самые <span>острые</span> темы мы раскрываем тут</h2>
-					</div>
-					<div class="blog-slider__slider-navigation">
-						<div class="swiper-button-prev blog-slider-prev slider-prev"></div>
-						<div class="swiper-button-next blog-slider-next slider-next"></div>
-					</div>
-				</div>
-			</div>
-
-			<div id="blogSlider" class="blog-slider swiper-container">
-				<div class="swiper-wrapper">
-
-					<div class="swiper-slide blog-slider__slide">
-						<div class="blog-slide">
-							<div class="blog-slide__head" style="background-image: url(images/dist/main-page/blog-doc.png);">
-								<a href="#" class="btn-disabled"></a>
-								<div class="blog-slide__head-articles">
-									<span class="blog-slide__head-article">Новости</span>
-									<span class="blog-slide__head-article">Контекст</span>
-									<span class="blog-slide__head-article">Таргет</span>
-								</div>
-							</div>
-							<div class="blog-slide__text">
-								<h6>Какие изменения произошли в контекстной и таргетированной рекламе с начала этого года</h6>
-								<p>С начала года произошло много изменений в механизмах работы многих рекламных инструментов и
-									специалисты Two Digitals решили прокомментировать основные тренды.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide blog-slider__slide">
-						<div class="blog-slide">
-							<div class="blog-slide__head" style="background-image: url(images/dist/main-page/blog-keyboard.png);">
-								<a href="#" class="btn-disabled"></a>
-								<div class="blog-slide__head-articles">
-									<span class="blog-slide__head-article">Социальные сети</span>
-									<span class="blog-slide__head-article">Таргет</span>
-								</div>
-							</div>
-							<div class="blog-slide__text">
-								<h6>Почему трафик из социальных сетей есть, а продаж нет</h6>
-								<p>Наша команда решила поделиться самыми распространенными ошибками, которые допускают таргетологи и как
-									поступить, чтоб сразу получить клиентов из социальных сетей. </p>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide blog-slider__slide">
-						<div class="blog-slide">
-							<div class="blog-slide__head" style="background-image: url(images/dist/main-page/blog-doc.png);">
-								<a href="#" class="btn-disabled"></a>
-								<span class="blog-slide__head-article">Новости</span>
-								<span class="blog-slide__head-article">Контекст</span>
-								<span class="blog-slide__head-article">Таргет</span>
-							</div>
-							<div class="blog-slide__text">
-								<h6>Какие изменения произошли в контекстной и таргетированной рекламе с начала этого года</h6>
-								<p>С начала года произошло много изменений в механизмах работы многих рекламных инструментов и
-									специалисты Two Digitals решили прокомментировать основные тренды.</p>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-		<!-- /.container -->
-		<img class="lines line-2-pink" data-aos="fade-left" src="images/dist/components/line-2-pink.png" alt="Line">
-		<img class="lines line-1-pink" data-aos="fade-right" src="images/dist/components/line-1-pink.png" alt="Line">
-		<img class="art main_cube3" data-aos="fade-up" src="images/dist/cubes/cube3.png" alt="Кубик">
-		<img class="art main_cube9" data-aos="fade-up" src="images/dist/cubes/cube9.png" alt="Кубик">
+	<section class="main-page-request">
+		<!--#set var="imgLCube3" value="<img data-aos='zoom-in' src='images/dist/cubes/cube-3.png' alt='Кубик' class='cubes form-cube-3'>" -->
+		<!--#set var="imgLCube4" value="<img data-aos='zoom-in' src='images/dist/cubes/cube-4-light.png' alt='Кубик' class='cubes form-cube-4'>" -->
+		<!--#set var="imgLCube4copy" value="<img data-aos='zoom-in' src='images/dist/cubes/cube-4-light.png' alt='Кубик' class='cubes form-cube-4-s'>" -->
+		<!--#set var="imgLFormRight" value="<img data-aos='zoom-in' src='images/dist/main-page/basket-services.png' alt='Чат' class='img-chat-l-form'>" -->
+		<!--#include virtual="/parts/form.html" -->
 	</section>
-	<!-- /.blog-slider-wrap -->
+	<!-- /.main-page-request -->
 
 </main>
 
