@@ -1,0 +1,24 @@
+.target-mini-banner-1 {
+	position: relative;
+	margin: 7.5em 0 8.9375em;
+	img {
+		position: absolute;
+		width: 19.375em;
+		height: 12.9375em;
+		right: 30em;
+		top: -2em;
+	}
+}
+
+.target-mini-banner-2 {
+	position: relative;
+	margin: 7.5em 0 11.3125em;
+	.mini-banner {
+		&__text {
+			p {
+				font-size: 1.5em;
+				line-height: 120%;
+			}
+		}
+	}
+}

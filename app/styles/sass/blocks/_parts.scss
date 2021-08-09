@@ -220,3 +220,363 @@
 		}
 	}
 }
+
+// Mini-Banner ============================================
+
+.mini-banner {
+	background: #fff2f4;
+	border-radius: 1.5em;
+	padding: 3em 6em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__text {
+		p {
+			font-family: "Montserrat", sans-serif;
+			font-weight: 600;
+			font-size: 1.75em;
+			line-height: 110%;
+			color: $accent;
+			margin-bottom: 0.3em;
+		}
+		span {
+			font-size: 1.125em;
+			line-height: 1.6875em;
+			color: $accent;
+		}
+	}
+	@media (max-width: 1023px) {
+		flex-direction: column;
+		&__text {
+			margin: 0 0 1em;
+			p {
+				text-align: center;
+			}
+		}
+		@media (max-width: 578px) {
+			flex-direction: column;
+			border-radius: 0;
+			padding: 2.5em 2em;
+			.btn {
+				width: 100%;
+				margin-top: 1em;
+			}
+		}
+	}
+	&-black-bg {
+		.mini-banner {
+			background: $accent;
+			&__text {
+				p {
+					color: #fff;
+				}
+			}
+		}
+	}
+	&-blue-bg {
+		.mini-banner {
+			background: #f4faff;
+		}
+	}
+}
+
+// Faq ======================================================
+
+.faq {
+	&__container {
+		background: #242427;
+		border-radius: 2em;
+		max-width: 81.875em;
+		margin: 0 auto;
+		padding: 7em 0 10em 0;
+		position: relative;
+	}
+	&__content {
+		max-width: 51.5625em;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+	&__head {
+		text-align: center;
+		img {
+			width: 15.25em;
+			height: 7.6875em;
+			user-select: none;
+			pointer-events: none;
+		}
+		h2 {
+			color: #fff;
+			margin: 0.8em 0 0;
+		}
+	}
+	&__list {
+		ul {
+			margin: 6em 0 0;
+			li {
+				border-radius: 1em;
+				transition: background 0.3s ease-out;
+				padding: 2.5em 2.5em 1em;
+				.accordion__control {
+					display: flex;
+					justify-content: space-between;
+					p {
+						font-weight: 600;
+						font-size: 1.125em;
+						line-height: 1.5em;
+						color: #7c7e86;
+						margin-bottom: 0;
+						padding-right: 0.5em;
+						transition: color 0.3s ease-out;
+					}
+					.accordion__icon {
+						width: 0.5em;
+						height: 0.5em;
+						margin-top: 0.3em;
+						border-bottom: 0.15em solid #fff;
+						border-right: 0.15em solid #fff;
+						transform: rotate(45deg);
+						transition: transform 0.1s ease-out;
+					}
+					&:hover {
+						p {
+							color: $grey-light;
+						}
+					}
+				}
+				.accordion__content {
+					transition: max-height 0.3s ease-out;
+
+					p {
+						margin-bottom: 0;
+					}
+				}
+				&.open {
+					background: rgba(41, 41, 48, 0.7);
+					margin: 0 0 1em;
+					.accordion__control {
+						padding: 0 0 1em;
+						p {
+							color: #fff;
+						}
+						.accordion__icon {
+							transform: rotate(225deg);
+						}
+					}
+					.accordion__content {
+						padding: 0;
+						p {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 578px) {
+		&__container {
+			padding: 3.125em 0 7.8125em;
+		}
+		&__list {
+			ul {
+				margin: 2.5em 0 0;
+			}
+		}
+	}
+}
+
+.line-2 {
+	height: 30.28063em;
+	width: 49.03em;
+	bottom: 8.3125em;
+}
+.line-2-2 {
+	height: 40.125em;
+	width: 51.1875em;
+	right: 0.5em;
+	top: 187px;
+}
+.faq-cube-1 {
+	width: 6.33938em;
+	height: 6.0225em;
+	top: 9.375em;
+	left: 9.9375em;
+	transform: rotate(-15deg);
+}
+.faq-cube-2 {
+	width: 3.24187em;
+	height: 3.07813em;
+	//transform: matrix(0.21, 0.98, 0.98, -0.21, 0, 0);
+	top: 18.875em;
+	right: 11.5625em;
+}
+.faq-cube-3 {
+	filter: blur(0.25em);
+	width: 4.22438em;
+	height: 3.91625em;
+	left: 13.25em;
+	bottom: 14.5em;
+}
+.faq-cube-4 {
+	width: 7.075em;
+	height: 6.70437em;
+	right: 4.5em;
+	bottom: 7.875em;
+}
+@media (max-width: 578px) {
+	.line-2-2 {
+		right: -6.375em;
+	}
+	.faq-cube-1 {
+		left: auto;
+		right: -2.5em;
+	}
+	.faq-cube-2 {
+		top: 37.1875em;
+		right: auto;
+		left: -1.5em;
+	}
+	.faq-cube-3 {
+		display: none;
+	}
+	.faq-cube-4 {
+		bottom: 1.25em;
+		right: 0;
+	}
+}
+
+// List-components ================================================
+
+.list-components {
+	&-wrap {
+		padding: 3em 1em;
+	}
+	&__body {
+		display: flex;
+		flex-flow: wrap;
+		margin: 4.5em 0 0;
+	}
+	&__point {
+		width: 50%;
+		padding-left: 7.5em;
+		padding-right: 3em;
+		position: relative;
+		&-img {
+			width: 5.625em;
+			height: 5.625em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 2em 0 0;
+			position: absolute;
+			left: 0;
+			top: -1em;
+			img {
+				width: 100%;
+			}
+		}
+		&-title {
+			display: flex;
+			h3 {
+				font-weight: 600;
+				font-size: 1.75em;
+				line-height: 120%;
+				letter-spacing: -0.025em;
+			}
+		}
+		&-text {
+			margin: 0.8125em 0 2.75em;
+			max-width: 25.1875em;
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@media (max-width: 1023px) {
+		&__point {
+			padding-left: 6em;
+			padding-right: 1em;
+		}
+		@media (max-width: 578px) {
+			&__body {
+				flex-direction: column;
+				margin: 2.5em 0 0;
+			}
+			&__point {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+				&-title {
+					max-height: 4.5em;
+				}
+				&-img {
+					width: 3.625em;
+					height: 3.625em;
+					position: relative;
+					margin: 0 0 0 -0.5em;
+				}
+				&-text {
+					margin: 0 0 1.75em;
+				}
+			}
+		}
+	}
+}
+
+// Quote ======================================================================
+
+.quote {
+	&-wrap {
+		background: #f4faff;
+		padding: 3.625em 1em;
+		position: relative;
+		margin: 8em 0;
+		&.qoute-pink-bg {
+			background: #fff2f4;
+		}
+	}
+	h2 {
+		text-align: center;
+		max-width: 26em;
+		margin: 0 auto;
+	}
+}
+
+.quote-img-1 {
+	width: 7.75em;
+	height: 7.75em;
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	left: 3.4375em;
+	bottom: -2.5em;
+}
+.quote-img-2 {
+	width: 6.125em;
+	height: 6.125em;
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	right: 3.875em;
+	top: -2.25em;
+}
+@media (max-width: 1023px) {
+	.quote-img-1 {
+		bottom: -4em;
+	}
+	@media (max-width: 578px) {
+		.quote-img-1 {
+			width: 4em;
+			height: 4em;
+			left: 1.625em;
+			bottom: -2.5em;
+		}
+		.quote-img-2 {
+			width: 3em;
+			height: 3em;
+			position: absolute;
+			right: 1.5em;
+			top: -1.25em;
+		}
+	}
+}
