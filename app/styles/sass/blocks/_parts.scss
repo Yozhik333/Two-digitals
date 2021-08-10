@@ -25,6 +25,9 @@
 					color: $textcolor;
 				}
 			}
+			.btn-black-gradient {
+				margin: 0 1.5em 0 0;
+			}
 		}
 	}
 	@media (max-width: 1023px) {
@@ -38,7 +41,7 @@
 			position: relative;
 		}
 	}
-	@media (max-width: 568px) {
+	@media (max-width: 578px) {
 		&__info {
 			p {
 				margin: 1.5em 0;
@@ -53,6 +56,9 @@
 				}
 				a {
 					margin-left: 0;
+				}
+				.btn-black-gradient {
+					margin: 0 0 1em;
 				}
 			}
 		}
@@ -254,8 +260,6 @@
 			}
 		}
 		@media (max-width: 578px) {
-			flex-direction: column;
-			border-radius: 0;
 			padding: 2.5em 2em;
 			.btn {
 				width: 100%;
