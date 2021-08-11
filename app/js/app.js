@@ -6,9 +6,10 @@ Swiper.use([Navigation]);
 document.addEventListener('DOMContentLoaded', () => {
 
 	Aos.init({
-		duration: 1000,
+		duration: 700,
 		easing: 'ease-in-out-back',
-		anchorPlacement: 'top-top'
+		anchorPlacement: 'top-top',
+		delay: '0ms'
 	});
 
 	// IsMobile start

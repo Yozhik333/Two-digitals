@@ -85,6 +85,36 @@
 		height: 100%;
 	}
 }
+.btn-mouse-white,
+.btn-mouse-pink {
+	position: relative;
+	&::before {
+		content: "";
+		width: 6.0625em;
+		height: 6.25em;
+		right: -3em;
+		bottom: -2.3em;
+		position: absolute;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	@media (max-width: 578px) {
+		&::before {
+			right: -2em;
+		}
+	}
+}
+.btn-mouse-white {
+	&::before {
+		background-image: url("../images/dist/components/btn-mouse-white.png");
+	}
+}
+.btn-mouse-pink {
+	&::before {
+		background-image: url("../images/dist/components/btn-mouse-pink.png");
+	}
+}
 
 .icon-cover-img {
 	//flex: 0 0 33.333%; // Навсякий случай для резинности ширины

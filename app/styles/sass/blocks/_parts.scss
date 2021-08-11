@@ -261,9 +261,12 @@
 		}
 		@media (max-width: 578px) {
 			padding: 2.5em 2em;
-			.btn {
+			&__btn {
 				width: 100%;
-				margin-top: 1em;
+				.btn {
+					width: 100%;
+					margin-top: 1em;
+				}
 			}
 		}
 	}
@@ -452,8 +455,15 @@
 // List-components ================================================
 
 .list-components {
+	position: relative;
 	&-wrap {
 		padding: 3em 1em;
+	}
+	&__head {
+		p {
+			max-width: 42.125em;
+			margin: 0.875em 0;
+		}
 	}
 	&__body {
 		display: flex;
@@ -510,8 +520,11 @@
 				width: 100%;
 				padding-left: 0;
 				padding-right: 0;
+				&:not(:last-child) {
+					margin: 0 0 2.5em;
+				}
 				&-title {
-					max-height: 4.5em;
+					max-height: 3em;
 				}
 				&-img {
 					width: 3.625em;
@@ -520,7 +533,7 @@
 					margin: 0 0 0 -0.5em;
 				}
 				&-text {
-					margin: 0 0 1.75em;
+					margin: 0;
 				}
 			}
 		}
