@@ -20,6 +20,7 @@
 	transition: background 5.5s cubic-bezier(0, 0.83, 0.58, 1);
 	&:hover {
 		background-position: 0;
+		color: #fff;
 	}
 }
 .btn-black-gradient {

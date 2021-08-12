@@ -8,6 +8,11 @@
 	color: $pink;
 }
 
+.original-page-request {
+	position: relative;
+	margin: 2.8125em 0 4em;
+}
+
 .request {
 	background: #f4faff;
 	border-radius: 2em;
@@ -15,6 +20,9 @@
 	position: relative;
 	.h2-64 {
 		padding-right: 2em;
+		.dot-pink {
+			margin-left: -0.3em;
+		}
 	}
 	&__body {
 		display: flex;
@@ -145,8 +153,9 @@
 	position: absolute;
 	user-select: none;
 	pointer-events: none;
-	right: 0;
-	bottom: 0;
+	right: -3em;
+	bottom: -5em;
+	width: 33.75em;
 }
 .form-cube-3 {
 	width: 5.22813em;
@@ -178,5 +187,70 @@
 	transform: rotate(-19.37deg);
 	@media (max-width: 578px) {
 		display: none;
+	}
+}
+
+.mini-form {
+	.request {
+		background: #fff2f4;
+		&__body {
+			flex-direction: column-reverse;
+		}
+		&__form {
+			width: 100%;
+			.form {
+				flex-direction: row;
+				.btn {
+					width: max-content;
+					height: auto;
+				}
+			}
+			&-input {
+				margin: 0 1em 0 0;
+				width: 19em;
+				input {
+					padding: 1.3em 1.5em 1.2em 4em;
+				}
+			}
+			&-textarea {
+				display: none;
+			}
+			&-privacy {
+				p {
+					text-align: left;
+				}
+			}
+		}
+		&__contacts {
+			width: 100%;
+			display: flex;
+			padding: 0;
+			&-social {
+				display: none;
+			}
+			&-phone,
+			&-mail {
+				p {
+					display: none;
+				}
+				a {
+					color: #fa406d;
+					font-weight: 600;
+					font-size: 1.75em;
+					line-height: 120%;
+					letter-spacing: -0.025em;
+				}
+			}
+			&-phone {
+				position: relative;
+				&::after {
+					content: "/";
+					font-size: 1.75em;
+					margin: 0 0.3em;
+					display: inline-block;
+					color: #fa406d;
+				}
+			}
+		}
 	}
 }

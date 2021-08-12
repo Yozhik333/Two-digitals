@@ -1,5 +1,35 @@
 .target-page {
 	padding-top: 12em;
+	.mini-form {
+		.form-cube-3 {
+			width: 5.22813em;
+			height: 4.84625em;
+			right: 21.5625em;
+			top: 8.25em;
+			transform: rotate(23.68deg);
+			z-index: 2;
+		}
+		.form-cube-4 {
+			width: 7.44125em;
+			height: 6.89813em;
+			right: 12.625em;
+			top: 1em;
+			z-index: 2;
+		}
+		.form-cube-4-s {
+			width: 8.55937em;
+			height: 7.93438em;
+			right: 9.8125em;
+			top: 10.375em;
+			z-index: 2;
+		}
+		.line-1-pink {
+			right: 11em;
+			top: -16em;
+			width: 50em;
+			transform: scale(-1, 1) rotate(-81deg);
+		}
+	}
 	@media (max-width: 769px) {
 		padding-top: 11em;
 	}
@@ -19,6 +49,18 @@
 	}
 	.mini-banner {
 		border-radius: 0;
+	}
+	@media (max-width: 1023px) {
+		margin: 20.5em 0 8.9375em;
+		img {
+			display: none;
+		}
+		.mini-banner__text {
+			text-align: center;
+		}
+		@media (max-width: 578px) {
+			margin: 7.5em 0 8.9375em;
+		}
 	}
 }
 
