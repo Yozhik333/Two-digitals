@@ -30,13 +30,13 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 		font-family: $fname;
 		font-style: $fstyle;
 		font-weight: $fweight;
-		src: url($furl) format("woff2");
+		src: url($furl) format(".woff2");
 	}
 }
 @include font("Montserrat", normal, 600, "../fonts/MontserratSemiBold.woff2");
-@include font("Poppins", normal, 500, "../fonts/PoppinsMedium.woff2");
-@include font("Poppins", bold, 700, "../fonts/PoppinsBold.woff2");
-@include font("Poppins", normal, 400, "../fonts/PoppinsRegular.woff2");
+@include font("Poppins", normal, 500, "/fonts/PoppinsMedium.woff2");
+@include font("Poppins", bold, 700, "/fonts/PoppinsBold.woff2");
+@include font("Poppins", normal, 400, "/fonts/PoppinsRegular.woff2");
 @include font("roboto-oh5", italic, 700, "../fonts/roboto-bolditalic-webfont.woff2");
 @include font("roboto-oh5", normal, 400, "../fonts/roboto-regular-webfont.woff2");
 
@@ -68,7 +68,12 @@ body {
 body._lock {
 	overflow: hidden;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1440px) {
+	body {
+		font-size: 0.9vw;
+	}
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
 	body {
 		font-size: 1.1vw;
 	}
@@ -95,7 +100,7 @@ body._lock {
 .content {
 	overflow: hidden;
 	flex: 1;
-	padding-top: 15em;
+	padding-top: 14.875em;
 	@media (max-width: 769px) {
 		padding-top: 11em;
 	}
@@ -125,7 +130,9 @@ ul {
 	}
 }
 p,
-span {
+span,
+li,
+a {
 	font-family: $userfont;
 }
 

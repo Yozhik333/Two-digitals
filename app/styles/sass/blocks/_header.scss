@@ -62,7 +62,7 @@
 	position: absolute;
 	z-index: -1;
 	width: 20.75em;
-	height: 11.8125em;
+	height: 10.8125em;
 	left: -3em;
 	top: 0;
 	user-select: none;
@@ -83,7 +83,6 @@
 }
 .menu__link {
 	& > a {
-		font-family: "Montserrat", sans-serif;
 		color: $textcolor;
 		font-size: 1em;
 		line-height: 1.5em;
@@ -91,7 +90,6 @@
 		transition: border-bottom 0.1s ease-out, color 0.3s ease;
 		border-bottom: 0.125em solid transparent;
 		border-radius: 0.0825em;
-		//font-family: "Poppins", sans-serif;
 		&:hover {
 			color: $pink;
 			border-bottom: 0.125em solid $pink;
@@ -108,7 +106,6 @@
 	transition: border-bottom 0.1s ease-out, color 0.3s ease;
 	border-bottom: 0.125em solid transparent;
 	border-radius: 0.0825em;
-	font-family: "Montserrat", sans-serif;
 	&::after {
 		transform: rotate(45deg) translate(50%);
 		margin: 0 0 0 0.5em;
