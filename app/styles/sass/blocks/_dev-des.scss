@@ -1,3 +1,50 @@
+// Dev-des-faq
+
+.dev-des-faq {
+	background: #27272e;
+	position: relative;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		border-radius: 50%;
+		background: #373745;
+	}
+	&::before {
+		width: 16.75em;
+		height: 16.75em;
+		right: -5em;
+		top: 9em;
+		animation: levitation 4s linear infinite;
+	}
+	&::after {
+		bottom: 19.5em;
+		left: 8.375em;
+		width: 5.625em;
+		height: 5.625em;
+		animation: levitation 5s linear infinite reverse;
+	}
+	.faq {
+		&__container {
+			background: none;
+			&::before {
+				content: "";
+				position: absolute;
+				border-radius: 50%;
+				width: 2.5em;
+				height: 2.5em;
+				background: #31313e;
+				left: 18em;
+				top: 18.75em;
+				animation: levitation 4s linear infinite reverse;
+			}
+			.lines {
+				display: none;
+			}
+		}
+	}
+}
+
 // Elipses ==========================================
 
 .elipses {
@@ -286,10 +333,8 @@
 	left: 32%;
 	z-index: -1;
 	@media (max-width: 1023px) {
-		.line-1-yellow {
-			left: 0;
-			top: 0;
-		}
+		left: 0;
+		top: 0;
 	}
 }
 
@@ -343,6 +388,62 @@
 	}
 }
 
+// Form-style
+
+.form-style-page {
+	padding-top: 15em;
+	.third-blocks {
+		&__description {
+			width: 46%;
+		}
+		@media (max-width: 1023px) {
+			&__description {
+				width: 100%;
+			}
+		}
+	}
+	@media (max-width: 769px) {
+		padding-top: 10em;
+	}
+}
+
+.form-style-main-block {
+	position: relative;
+	padding-bottom: 12.375em;
+	.main-block__info {
+		h1 {
+			max-width: 10em;
+		}
+	}
+	.line-1-yellow {
+		top: -38%;
+	}
+	@media (max-width: 1023px) {
+		.line-1-yellow {
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+.form-style-main-block-illustration {
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	right: 0;
+	top: -5em;
+	width: 59em;
+	@media (max-width: 1023px) {
+		top: -4em;
+		width: 50.125em;
+		@media (max-width: 578px) {
+			top: 2em;
+			width: 43.025em;
+			right: -3em;
+		}
+	}
+}
+
 // Second-Blocks ==========================================
 
 .second-blocks {
@@ -390,13 +491,18 @@
 	}
 	@media (max-width: 1023px) {
 		&-wrap {
-			padding: 6.25em 2em;
+			padding: 4.25em 2em;
 		}
 		&__left {
 			display: none;
 		}
 		&__right {
 			width: 100%;
+			&-head {
+				p {
+					margin: 1.5em 0 0;
+				}
+			}
 		}
 	}
 }
@@ -638,7 +744,7 @@
 	}
 	@media (max-width: 1023px) {
 		&-wrap {
-			padding: 8.6875em 2em 7.125em;
+			padding: 4.6875em 2em 0;
 		}
 		&__description {
 			width: 100%;
@@ -659,7 +765,7 @@
 		}
 		@media (max-width: 578px) {
 			&-wrap {
-				padding: 8.6875em 2em 0em;
+				padding: 4.6875em 2em 0em;
 			}
 			&__images {
 				min-height: 0;
@@ -768,12 +874,12 @@
 		}
 		&-elips-1 {
 			left: 5em;
-			top: 33em;
+			top: -2em;
 		}
 		@media (max-width: 578px) {
 			&-elips-1 {
 				left: 3em;
-				top: 40em;
+				top: -2em;
 			}
 			&-elips-2 {
 				right: 2.375em;
@@ -985,9 +1091,11 @@
 		}
 	}
 	@media (max-width: 578px) {
-		&-elips-2 {
-			right: -0.625em;
-			top: -2.75em;
+		.seven-blocks {
+			&-elips-2 {
+				right: -1.625em;
+				top: -4.75em;
+			}
 		}
 	}
 }
@@ -1003,9 +1111,11 @@
 	}
 
 	@media (max-width: 578px) {
-		&-elips-2 {
-			right: -0.625em;
-			top: -2.75em;
+		.seven-blocks {
+			&-elips-2 {
+				right: -0.625em;
+				top: -4.75em;
+			}
 		}
 	}
 }
@@ -1019,6 +1129,26 @@
 		&__images {
 			&-elips {
 				background: #fab8c4;
+			}
+		}
+	}
+}
+
+.form-style-page {
+	.seven-blocks {
+		background: linear-gradient(90deg, #e2faff 0%, #f9e3e8 100%);
+		&__images {
+			&-elips {
+				background: #ffdc60;
+			}
+		}
+	}
+
+	@media (max-width: 578px) {
+		.seven-blocks {
+			&-elips-2 {
+				right: -3.625em;
+				top: -4.5em;
 			}
 		}
 	}
@@ -1140,10 +1270,15 @@
 	position: absolute;
 	user-select: none;
 	pointer-events: none;
-	@media (max-width: 578px) {
-		width: 18em;
-		top: 3em;
-		right: -4em;
+	@media (max-width: 1023px) {
+		right: -11em;
+		top: 0em;
+		width: 60em;
+		@media (max-width: 578px) {
+			width: 30em;
+			top: 0;
+			right: -5em;
+		}
 	}
 }
 
@@ -1183,6 +1318,28 @@
 			}
 		}
 	}
+	@media (max-width: 1023px) {
+		.list-blocks {
+			padding: 11.8125em 1em 5.3125em;
+		}
+		.cloud-2 {
+			right: 16.6875em;
+		}
+		@media (max-width: 578px) {
+			.list-blocks {
+				padding: 11.8125em 1em 5.3125em;
+			}
+			.cloud-1 {
+				width: 7.03625em;
+				height: 5.23687em;
+				right: 10em;
+				top: 1em;
+			}
+			.cloud-2 {
+				right: 16.6875em;
+			}
+		}
+	}
 }
 
 .calendar-design {
@@ -1192,4 +1349,12 @@
 	top: -10em;
 	user-select: none;
 	pointer-events: none;
+	@media (max-width: 1023px) {
+		width: 22.5em;
+		right: -6em;
+		top: -10em;
+		@media (max-width: 578px) {
+			width: 17.5em;
+		}
+	}
 }
