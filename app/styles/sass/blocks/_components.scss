@@ -13,6 +13,7 @@
 	height: 3.5em;
 	padding: 1.1em 2.5em;
 	text-align: center;
+	width: max-content;
 
 	position: relative;
 	background-image: linear-gradient(90deg, #fa406d 50%, transparent 50%);
@@ -37,7 +38,8 @@
 	border: 0.1em solid $accent;
 	color: $accent;
 	height: 3.5em;
-	padding: 1.1em 2.5em;
+	padding: 1em 2.5em;
+	text-align: center;
 }
 .btn-white {
 	background: #fff;
@@ -190,6 +192,23 @@
 				display: block;
 				position: absolute;
 				content: "";
+			}
+
+			&-light {
+				color: #fed0da;
+				position: relative;
+				padding-left: 2.3em;
+				&::before {
+					background-color: #fed0da;
+					height: 0.125em;
+					width: 1.3em;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					display: block;
+					position: absolute;
+					content: "";
+				}
 			}
 		}
 	}
@@ -397,6 +416,7 @@
 	pointer-events: none;
 	right: -8em;
 	top: -5em;
+	animation: levitation 20s linear infinite alternate-reverse;
 	@media (max-width: 1023px) {
 		right: -8em;
 		top: -8em;
@@ -404,6 +424,61 @@
 			width: 10em;
 			right: -3em;
 			top: -8em;
+		}
+	}
+}
+.camera-cube-1 {
+	width: 2.5625em;
+	top: -5.3125em;
+	right: 19em;
+	animation: levitation 10s linear infinite alternate-reverse;
+}
+.camera-cube-2 {
+	width: 2.5625em;
+	right: -9.5em;
+	bottom: 24.875em;
+	animation: levitation 10s linear infinite reverse;
+}
+.camera-cube-3 {
+	width: 4.375em;
+	right: -4.5em;
+	bottom: 17.625em;
+	animation: levitation 10s linear infinite;
+}
+@media (max-width: 1023px) {
+	.camera-cube-1 {
+		right: 15em;
+	}
+	.camera-cube-2 {
+		right: 13.5em;
+		bottom: -5em;
+	}
+	.camera-cube-3 {
+		right: 1.5em;
+		bottom: -4.375em;
+	}
+}
+
+.list-checks {
+	margin: 2em 0 0;
+	li {
+		position: relative;
+		padding-left: 2em;
+		margin: 0.8em 0 0;
+		font-size: 1.125em;
+		line-height: 1.6875em;
+		color: #999fae;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0.6em;
+			width: 0.4em;
+			top: 0.2em;
+			height: 0.8em;
+			transform: rotate(45deg);
+			border-bottom: 0.1em solid #fda2b7;
+			border-right: 0.1em solid #fda2b7;
 		}
 	}
 }

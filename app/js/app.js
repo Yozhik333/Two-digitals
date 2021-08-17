@@ -117,76 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	//let accordionsMain = document.querySelectorAll('.accordion__control');
-	//if (accordionsMain.length > 0) {
-	//	for (let index = 0; index < accordionsMain.length; index++) {
-	//		const accordionMain = accordionsMain[index];
-	//		accordionMain.addEventListener("click", function (e) {
-	//			accordionMain.parentElement.classList.toggle('open');
-	//			const content = this.nextElementSibling;
-	//			if (accordionMain.parentElement.classList.contains('open')) {
-	//				accordionMain.setAttribute('aria-expanded', true);
-	//				content.setAttribute('aria-hidden', false);
-	//				content.style.maxHeight = content.scrollHeight + 'px';
-	//			}
-	//			else {
-	//				accordionMain.setAttribute('aria-expanded', false);
-	//				content.setAttribute('aria-hidden', true);
-	//				content.style.maxHeight = null;
-	//			}
-	//		});
-	//	}
-	//}
-
-	//let accr = document.querySelectorAll('.accordion__control');
-
-	//if (accr.length > 0) {
-	//	for (let index = 0; index < accr.length; index++) {
-	//		const accrOpen = accr[index];
-	//		accrOpen.addEventListener("click", function (e) {
-	//			accrOpen.parentElement.classList.toggle('open');
-	//			const self = document.querySelector('.accordion');
-	//			const control = document.querySelector('.accordion__control');
-	//			const content = document.querySelector('.accordion__content');
-
-	//			// если открыт аккордеон
-	//			if (self.classList.contains('open')) {
-	//				control.setAttribute('aria-expanded', true);
-	//				content.setAttribute('aria-hidden', false);
-	//				content.style.maxHeight = content.scrollHeight + 'px';
-	//			} else {
-	//				control.setAttribute('aria-expanded', false);
-	//				content.setAttribute('aria-hidden', true);
-	//				content.style.maxHeight = null;
-	//			}
-	//		});
-	//	}
-	//}
-
-	// !Аккордион
-	//const accordions = document.querySelectorAll('.accordion');
-
-	//accordions.forEach(el => {
-	//	el.addEventListener('click', (e) => {
-	//		const self = e.currentTarget;
-	//		const control = self.querySelector('.accordion__control');
-	//		const content = self.querySelector('.accordion__content');
-
-	//		self.parentElement.classList.toggle('open');
-
-	//		// если открыт аккордеон
-	//		if (self.classList.contains('open')) {
-	//			control.setAttribute('aria-expanded', true);
-	//			content.setAttribute('aria-hidden', false);
-	//			content.style.maxHeight = content.scrollHeight + 'px';
-	//		} else {
-	//			control.setAttribute('aria-expanded', false);
-	//			content.setAttribute('aria-hidden', true);
-	//			content.style.maxHeight = null;
-	//		}
-	//	});
-	//});
-
 
 	//! Next sliders
 
@@ -209,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				spaceBetween: 20
 			},
 			1024: {
-				slidesPerView: 3,
+				slidesPerView: 2.7,
 			},
 		}
 	});

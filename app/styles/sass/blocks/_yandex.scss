@@ -1,0 +1,73 @@
+.yandex-calendar-cloud {
+	background: #292930;
+	margin: 5.75em 0 0;
+	.secondary-block {
+		&__images {
+			width: 27%;
+		}
+		&__info {
+			h2 {
+				color: #fff;
+			}
+			&-links {
+				.btn-opacity {
+					color: #fff;
+					background-color: transparent;
+					border: 0.1em solid #fff;
+				}
+			}
+		}
+	}
+	@media (max-width: 1023px) {
+		.secondary-block {
+			&__images {
+				width: 100%;
+			}
+		}
+		@media (max-width: 578px) {
+			.secondary-block {
+				&__info {
+					&-links {
+						.btn-opacity {
+							width: 100%;
+							justify-content: center;
+						}
+					}
+				}
+			}
+		}
+	}
+	.calendar-cloud-image {
+		position: absolute;
+		user-select: none;
+		pointer-events: none;
+		width: 43.4375em;
+		right: -8em;
+		top: -10em;
+		@media (max-width: 1023px) {
+			width: 32.4375em;
+			right: 9em;
+			top: 2em;
+			@media (max-width: 578px) {
+				right: -1.4em;
+			}
+		}
+	}
+}
+
+.calendar-cloud-image {
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	width: 43.4375em;
+	right: 0em;
+	top: -1em;
+	@media (max-width: 1023px) {
+		width: 32.4375em;
+		right: 9em;
+		top: 2em;
+		@media (max-width: 578px) {
+			right: -1.4em;
+		}
+	}
+}

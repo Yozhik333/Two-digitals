@@ -69,6 +69,7 @@
 
 .secondary-block {
 	display: flex;
+	position: relative;
 	&-wrap {
 		padding: 8.25em 0 7.8125em;
 		position: relative;
@@ -162,30 +163,6 @@
 	}
 	@media (max-width: 1023px) {
 		padding: 9em 0em;
-	}
-}
-
-.list-checks {
-	margin: 2em 0 0;
-	li {
-		position: relative;
-		padding-left: 2em;
-		margin: 0.8em 0 0;
-		font-size: 1.125em;
-		line-height: 1.6875em;
-		color: #999fae;
-
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0.6em;
-			width: 0.4em;
-			top: 0.2em;
-			height: 0.8em;
-			transform: rotate(45deg);
-			border-bottom: 0.1em solid #fda2b7;
-			border-right: 0.1em solid #fda2b7;
-		}
 	}
 }
 
@@ -956,22 +933,22 @@
 			&:nth-child(1) {
 				border-top: 0.0625em solid #e3e6e9;
 				border-right: 0.0625em solid #e3e6e9;
-				padding: 2.5em 8.25em 1.25em 8.5em;
+				padding: 2.5em 8.25em 1.25em 14.3em;
 			}
 			&:nth-child(2) {
 				border-top: 0.0625em solid #999fae;
-				padding: 2.5em 8.25em 1.25em 2.125em;
+				padding: 2.5em 14.3em 1.25em 2.125em;
 			}
 			&:nth-child(3) {
 				border-right: 0.0625em solid #e3e6e9;
 				border-bottom: 0.0625em solid #e3e6e9;
 				border-top: 0.0625em solid #999fae;
-				padding: 2.5em 8.25em 1.25em 8.5em;
+				padding: 2.5em 8.25em 1.25em 14.3em;
 			}
 			&:nth-child(4) {
 				border-top: 0.0625em solid #e3e6e9;
 				border-bottom: 0.0625em solid #e3e6e9;
-				padding: 2.5em 8.25em 1.25em 2.125em;
+				padding: 2.5em 14.3em 1.25em 2.125em;
 			}
 		}
 	}
@@ -1118,7 +1095,7 @@
 			h4 {
 				font-family: "Poppins", sans-serif;
 				font-style: normal;
-				font-weight: bold;
+				font-weight: 500;
 				font-size: 0.875em;
 				width: max-content;
 				line-height: 100%;
@@ -1140,13 +1117,13 @@
 	}
 	&-cube-2 {
 		bottom: 2em;
-		right: 5em;
+		right: 10em;
 		width: 10em;
 		animation: levitation 4s linear infinite;
 	}
 	&-cube-3 {
 		width: 2.25em;
-		right: 14em;
+		right: 19em;
 		bottom: 33%;
 		animation: levitation 6s linear infinite reverse;
 	}

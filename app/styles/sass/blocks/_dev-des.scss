@@ -84,12 +84,12 @@
 .elips-32 {
 	width: 1.5em;
 	height: 1.5em;
-	animation: levitation 4s linear infinite reverse;
+	animation: levitation 5s linear infinite alternate-reverse;
 }
 .elips-24 {
 	width: 1.5em;
 	height: 1.5em;
-	animation: levitation 4s linear infinite reverse;
+	animation: levitation 5s linear infinite reverse;
 }
 // Elipses-color
 .elips-accent1 {
@@ -106,6 +106,9 @@
 }
 .elips-white {
 	background: #fff;
+}
+.elips-red {
+	background: #fa406d;
 }
 
 // First-Blocks ==========================================================================================\
