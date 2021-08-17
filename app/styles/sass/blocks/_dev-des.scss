@@ -110,6 +110,12 @@
 .elips-red {
 	background: #fa406d;
 }
+.elips-pink {
+	background: #fff2f4;
+}
+.elips-black {
+	background: #292930;
+}
 
 // First-Blocks ==========================================================================================\
 
@@ -1359,5 +1365,34 @@
 		@media (max-width: 578px) {
 			width: 17.5em;
 		}
+	}
+}
+
+//! Create-page =================================
+
+.create-page {
+	.seo-main-block-illustration {
+		width: 39.0625em;
+		right: -3em;
+		left: auto;
+		top: -2em;
+	}
+}
+
+.create-keyboard-block {
+	margin: 4.5em 0 0;
+}
+.create-list-components {
+	margin: 4.5em 0 0;
+}
+
+// ! App-create-page ======================================
+
+.app-create-page {
+	.seo-main-block-illustration {
+		width: 39.0625em;
+		right: -3em;
+		left: auto;
+		top: -2em;
 	}
 }
