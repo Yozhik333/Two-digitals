@@ -111,25 +111,6 @@
 	&-card-wrap {
 		width: 26em;
 		padding: 0 1em;
-		&:nth-child(2) {
-			.complex__cards-card {
-				background: $accent;
-				h2 {
-					color: #fff;
-				}
-				.line-cube {
-					&::before,
-					&::after {
-						background: #fff;
-					}
-				}
-			}
-			.complex__cards-bottom {
-				p {
-					color: #fff;
-				}
-			}
-		}
 	}
 	&-card {
 		padding: 3em 2em 11em;
@@ -139,9 +120,11 @@
 		width: 100%;
 		background: #fff;
 		position: relative;
+		transition: background 0.2s ease-out;
 		h2 {
 			margin: 0 0 1em;
 			text-align: center;
+			transition: color 0.2s ease-out;
 		}
 		ul {
 			li {
@@ -154,6 +137,26 @@
 					right: 0;
 					position: absolute;
 					content: "\2192";
+				}
+			}
+		}
+		&:hover {
+			background: $accent;
+			h2 {
+				color: #fff;
+			}
+			.line-cube {
+				&::before,
+				&::after {
+					background: #fff;
+				}
+			}
+			.complex__cards-price {
+				color: #fff;
+			}
+			.complex__cards-bottom {
+				.btn {
+					background-color: $pink;
 				}
 			}
 		}
@@ -180,6 +183,7 @@
 		button {
 			display: block;
 			width: 100%;
+			transition: background-color 0.2s ease-out;
 		}
 	}
 	@media (max-width: 1023px) {

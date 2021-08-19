@@ -376,6 +376,7 @@
 	width: 1.43em;
 	height: 1.21em;
 	font-size: 0.7em;
+	transition: 0.2s ease-out;
 	span {
 		width: 1em;
 		height: 0.5em;
@@ -386,6 +387,7 @@
 		transform: rotateX(29deg) rotate(-12deg) skewX(48deg) skewY(-12.8deg);
 		background: #fed0da;
 		border-radius: 0.01em;
+		transition: 0.2s ease-out;
 	}
 	&::before,
 	&::after {
@@ -395,6 +397,7 @@
 		bottom: 0;
 		background: $accent;
 		border-radius: 0.01em;
+		transition: 0.2s ease-out;
 		content: "";
 	}
 	&::before {

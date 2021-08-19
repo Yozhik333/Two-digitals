@@ -1,7 +1,7 @@
 .new-era {
-	padding-top: 14.875em;
+	padding-top: 10.5em;
 	&-wrap {
-		padding-bottom: 3.625em;
+		padding-bottom: 2.625em;
 		position: relative;
 	}
 	&__content {
@@ -26,7 +26,7 @@
 			}
 		}
 		p {
-			margin: 0 0 3.5em;
+			margin: 0 0 3em;
 			padding-right: 4em;
 			color: $grey-light;
 			font-size: 1.125em;
@@ -852,7 +852,7 @@
 // Dveloping-block
 
 .developing-block {
-	min-height: 15em;
+	min-height: 17.5em;
 	position: relative;
 	padding: 3em;
 	margin: 3em 0 5em;
@@ -868,6 +868,7 @@
 	}
 	p {
 		color: #000;
+		margin: 0.9em 0 0;
 		font-size: 1.125em;
 		span {
 			color: $pink;
