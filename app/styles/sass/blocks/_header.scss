@@ -4,6 +4,35 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	&.backToTop_visible {
+		position: fixed;
+		transition: position 1s ease-out;
+		background-color: rgba(255, 255, 255, 0.97);
+		.header__container {
+			min-height: 5.8125em;
+			&::after {
+				left: 0;
+				right: 0;
+				border-bottom: 0.0625em solid $pink;
+				transition: border-color 5s ease-out, left 1s ease-out, right 1s ease-out;
+			}
+		}
+		.header__call {
+			.phone-light {
+				a {
+					color: #292930;
+					transition: color 0.3s ease-out;
+				}
+			}
+			.btn-white {
+				background: #292930;
+				color: #fff;
+			}
+		}
+		.back-for-logo {
+			top: -3em;
+		}
+	}
 	&__logo {
 		width: 6.3125em;
 		height: 3em;
@@ -31,8 +60,22 @@
 		align-items: center;
 		justify-content: space-between;
 		min-height: 10.8125em;
+		&::after {
+			content: "";
+			left: 50%;
+			right: 50%;
+			bottom: 0;
+			z-index: -2;
+			position: absolute;
+			border-bottom: 0 solid $pink;
+		}
 	}
 	@media (max-width: 1023px) {
+		&.backToTop_visible {
+			.back-for-logo {
+				top: 0;
+			}
+		}
 		&__logo {
 			&-menu {
 				display: block;

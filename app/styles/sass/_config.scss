@@ -33,7 +33,10 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 		src: url($furl) format(".woff2");
 	}
 }
+@include font("Montserrat", bold, 700, "../fonts/MontserratBold.woff2");
 @include font("Montserrat", normal, 600, "../fonts/MontserratSemiBold.woff2");
+@include font("Montserrat", normal, 500, "../fonts/MontserratMedium.woff2");
+@include font("Montserrat", normal, 400, "../fonts/MontserratRegular.woff2");
 @include font("Poppins", normal, 500, "/fonts/PoppinsMedium.woff2");
 @include font("Poppins", bold, 700, "/fonts/PoppinsBold.woff2");
 @include font("Poppins", normal, 400, "/fonts/PoppinsRegular.woff2");
@@ -42,9 +45,9 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 
 // GENERAL DOCUMENT STYLES
 
-:root {
-	font-size: calc(1vw + 1vh + 0.5vmin);
-}
+//:root {
+//	font-size: calc(1vw + 1vh + 0.5vmin);
+//}
 input,
 textarea {
 	outline: none;
@@ -100,11 +103,18 @@ body._lock {
 .content {
 	overflow: hidden;
 	flex: 1;
-	padding-top: 14.875em;
+	padding-top: 14em;
 	@media (max-width: 769px) {
 		padding-top: 11em;
 	}
 }
+//main {
+//	@media (min-width: 1925px) {
+//		max-width: 1920px;
+//		margin-left: auto;
+//		margin-right: auto;
+//	}
+//}
 .container {
 	max-width: 81.875em;
 	margin: 0 auto;

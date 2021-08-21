@@ -127,6 +127,7 @@
 
 .crm-main-block {
 	padding: 0 0 10em;
+	position: relative;
 	.container__text {
 		position: relative;
 	}
@@ -161,9 +162,10 @@
 	.main-block__images {
 		.crm-main-block-illustration {
 			position: absolute;
-			right: -18em;
+			right: -15em;
 			top: -11.5em;
 			width: 48.375em;
+			animation: levitation 18s linear infinite;
 		}
 	}
 	.cube-1 {
@@ -183,6 +185,30 @@
 		right: -15em;
 		bottom: 0;
 	}
+	.elipses {
+		z-index: -1;
+	}
+	.blue-elips-1 {
+		width: 3.5625em;
+		height: 3.5625em;
+		right: 5.75em;
+		top: -6em;
+		animation: levitation 8s linear infinite;
+	}
+	.blue-elips-2 {
+		width: 6em;
+		height: 6em;
+		right: 24.75em;
+		top: 5em;
+		animation: levitation 8s linear infinite reverse;
+	}
+	.blue-elips-3 {
+		width: 16.25em;
+		height: 16.25em;
+		right: -12.25em;
+		bottom: -6em;
+		animation: levitation 8s linear infinite;
+	}
 	@media (max-width: 1023px) {
 		.main-block__images {
 			.crm-main-block-illustration {
@@ -201,7 +227,12 @@
 				.crm-main-block-illustration {
 					width: 37em;
 					top: 0;
+					right: -2em;
 				}
+			}
+			.blue-elips-2 {
+				right: 50%;
+				top: 29em;
 			}
 		}
 	}
@@ -688,6 +719,272 @@
 	@media (max-width: 578px) {
 		&.secondary-block-wrap {
 			padding: 0;
+		}
+	}
+}
+
+.seo-steps-work {
+	position: relative;
+	&-wrap {
+		padding: 0 0 8.125em;
+	}
+	&__head {
+		p {
+			margin: 1em 0 0;
+		}
+	}
+	&__body {
+		margin: 3em 0 0;
+		max-width: 56.25em;
+	}
+	.accordion__list {
+		.seo-steps-work-item {
+			padding: 2.25em 2em;
+			border: 0.0625em solid #999fae;
+			border-radius: 1em;
+			margin: 0 0 1.5em;
+			transition: border 0.3s ease-out;
+			background-color: #fff;
+			&.open {
+				border: 0.0625em solid #fa406d;
+				.accordion__content {
+					padding: 1.25em 6.2em 0em;
+				}
+				.accordion__icon {
+					&::before {
+						content: "свернуть";
+					}
+					&::after {
+						transform: rotate(225deg);
+					}
+				}
+			}
+		}
+		.seo-steps-work-control {
+			display: flex;
+			position: relative;
+			p {
+				margin: 0;
+				font-family: "Montserrat", sans-serif;
+				font-weight: 600;
+				font-size: 1.75em;
+				line-height: 120%;
+				letter-spacing: -0.025em;
+				color: #292930;
+			}
+		}
+		.seo-steps-work-item-number {
+			font-family: "Montserrat", sans-serif;
+			font-weight: 600;
+			font-size: 1.5em;
+			line-height: 120%;
+			color: #fff;
+			background-color: #fa406d;
+			border-radius: 6.25em;
+			padding: 0.125em 0.75em;
+			margin: 0 1.25em 0 0;
+		}
+		.accordion__content {
+			transition: max-height 0.3s ease-out;
+			p {
+				font-family: "Poppins", sans-serif;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1.125em;
+				line-height: 1.6875em;
+				color: #7c7e86;
+				span {
+					font-family: "Poppins", sans-serif;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 1em;
+					line-height: 130%;
+					color: #fa406d;
+					margin-right: 0.625em;
+				}
+			}
+		}
+		.accordion__icon {
+			position: absolute;
+			right: 0;
+			display: flex;
+			&::before {
+				content: "открыть";
+				font-family: "Montserrat", sans-serif;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 0.875em;
+				line-height: 100%;
+				text-align: right;
+				color: #999fae;
+				margin: 0.3em 1em 0 0;
+			}
+			&::after {
+				content: "";
+				width: 0.5em;
+				height: 0.5em;
+				margin-top: 0.3em;
+				display: block;
+				border-bottom: 0.125em solid #999fae;
+				border-right: 0.125em solid #999fae;
+				transform: rotate(45deg);
+				transition: transform 0.1s ease-out;
+			}
+		}
+	}
+	.coffee-red {
+		width: 16.75em;
+		right: 13%;
+		top: 0;
+		position: absolute;
+		user-select: auto;
+		pointer-events: none;
+	}
+	.text-popup {
+		width: 8.9375em;
+		right: 17%;
+		top: 37%;
+		position: absolute;
+		user-select: auto;
+		pointer-events: none;
+	}
+	.lamp {
+		width: 21.125em;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		user-select: auto;
+		pointer-events: none;
+	}
+	.line-1 {
+		width: 22.625em;
+		right: 0;
+		top: 19%;
+		z-index: -2;
+	}
+	.cloud {
+		width: 7.91812em;
+		height: 5.10313em;
+		top: -7em;
+		right: 33%;
+		animation: levitation 7s linear infinite reverse;
+	}
+	.cube-1 {
+		width: 4.375em;
+		right: 0;
+		top: 15%;
+		animation: levitation 7s linear infinite reverse;
+	}
+	.cube-2 {
+		width: 5.875em;
+		top: 50%;
+		right: 0;
+		animation: levitation 7s linear infinite;
+	}
+	.cube-3 {
+		width: 3.4375em;
+		bottom: 15%;
+		right: 24%;
+		animation: levitation 7s linear infinite reverse;
+	}
+	.seo-steps-rectangle-1 {
+		width: 17.60625em;
+		height: 17.60625em;
+		right: 16%;
+		top: 8%;
+		z-index: -1;
+		position: absolute;
+		background: #fff2f4;
+		border-radius: 2.5em;
+		transform: rotate(106.04deg);
+	}
+	.seo-steps-rectangle-2 {
+		width: 29.03875em;
+		height: 29.03875em;
+		right: 5%;
+		bottom: -5%;
+		z-index: -1;
+		position: absolute;
+		background: #fff2f4;
+		border-radius: 2.5em;
+		transform: rotate(-50.64deg);
+	}
+	@media (max-width: 1023px) {
+		&-wrap {
+			padding: 6em 1em 8.125em;
+		}
+		.accordion__list {
+			.seo-steps-work-item {
+				&.open {
+					.accordion__content {
+						padding: 1.25em 0 0;
+					}
+				}
+			}
+			.seo-steps-work-control {
+				flex-direction: column;
+				.seo-steps-work-item-number {
+					width: 3em;
+				}
+				p {
+					margin: 0.7em 0 0;
+				}
+			}
+		}
+		.coffee-red {
+			right: 3%;
+			top: -13em;
+		}
+		.cloud {
+			top: -9em;
+			right: auto;
+			left: 10%;
+		}
+		.lamp {
+			display: none;
+		}
+		.text-popup {
+			display: none;
+		}
+		.cube-1 {
+			display: none;
+		}
+		.cube-2 {
+			bottom: -7em;
+			top: auto;
+		}
+		.cube-3 {
+			bottom: -7em;
+		}
+		.seo-steps-rectangle-1 {
+			top: -9em;
+			right: -3em;
+		}
+		.seo-steps-rectangle-2 {
+			right: -10em;
+			bottom: 17%;
+		}
+		@media (max-width: 578px) {
+			.accordion__list {
+				.seo-steps-work-control {
+					.seo-steps-work-item-number {
+						font-size: 1em;
+					}
+					p {
+						font-size: 1.25em;
+					}
+				}
+			}
+			.cube-2 {
+				right: 13%;
+				bottom: -9em;
+				width: 7.875em;
+			}
+			.cube-3 {
+				width: 5.4375em;
+				bottom: -9em;
+				right: 58%;
+			}
 		}
 	}
 }

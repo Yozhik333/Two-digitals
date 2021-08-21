@@ -80,6 +80,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	/* Для фиксации меню при скроле вниз */
+	window.addEventListener('DOMContentLoaded', function () {
+		const scrollUpButton = document.querySelector('.backToTop');
+
+		if (scrollUpButton) {
+			scrollUpButton.addEventListener('click', function name() {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth',
+				});
+			});
+
+			window.addEventListener('scroll', function () {
+				const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+				if (scrolled >= 37) {
+					scrollUpButton.classList.add('backToTop_visible');
+				} else {
+					scrollUpButton.classList.remove('backToTop_visible');
+				}
+			});
+		}
+	});
+
 	// Аккордион
 
 	// получить все аккардионы на странице
