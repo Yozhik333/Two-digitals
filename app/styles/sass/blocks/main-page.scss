@@ -102,10 +102,9 @@
 }
 
 .main_picker {
-	right: 36.25em;
-	top: 12.85em;
+	right: 27.55em;
+	top: -4.15em;
 	width: 6.5em;
-	height: 10.0625em;
 	animation: eight 3s linear infinite;
 	z-index: 1;
 }
@@ -294,9 +293,9 @@
 		bottom: 14em;
 	}
 	.main_picker {
-		right: 27.85em;
+		right: 41.85em;
 		top: auto;
-		bottom: 17em;
+		bottom: 19em;
 	}
 	@media (max-width: 578px) {
 		.main_cube2 {
@@ -308,10 +307,9 @@
 			width: 4em;
 		}
 		.main_picker {
-			right: 11.85em;
-			bottom: 11.1em;
-			width: 4.5em;
-			height: 7.0625em;
+			right: 32.85em;
+			bottom: 18.7em;
+			width: 7em;
 		}
 	}
 }

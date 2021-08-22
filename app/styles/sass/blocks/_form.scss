@@ -156,7 +156,14 @@
 	right: -3em;
 	bottom: -5em;
 	width: 29em;
-	height: 30.0625em;
+	@media (max-width: 1023px) {
+		right: 27%;
+		bottom: -10em;
+		width: 25em;
+		@media (max-width: 1023px) {
+			right: 0%;
+		}
+	}
 }
 .form-cube-3 {
 	width: 5.22813em;

@@ -73,7 +73,7 @@ body._lock {
 }
 @media (min-width: 1440px) {
 	body {
-		font-size: 0.9vw;
+		font-size: 0.95vw;
 	}
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -106,6 +106,9 @@ body._lock {
 	padding-top: 14em;
 	@media (max-width: 769px) {
 		padding-top: 11em;
+		@media (max-width: 578px) {
+			padding-top: 9.375em;
+		}
 	}
 }
 //main {

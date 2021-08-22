@@ -8,6 +8,7 @@
 		position: fixed;
 		transition: position 1s ease-out;
 		background-color: rgba(255, 255, 255, 0.97);
+		z-index: 11;
 		.header__container {
 			min-height: 5.8125em;
 			&::after {
@@ -31,6 +32,12 @@
 		}
 		.back-for-logo {
 			top: -3em;
+		}
+		.blog-for-logo {
+			top: -5em;
+		}
+		.elips-for-logo-yellow {
+			top: -18.5em;
 		}
 	}
 	&__logo {
@@ -59,13 +66,13 @@
 		padding: 0 6.875em;
 		align-items: center;
 		justify-content: space-between;
-		min-height: 10.8125em;
+		min-height: 9.375em;
 		&::after {
 			content: "";
 			left: 50%;
 			right: 50%;
 			bottom: 0;
-			z-index: -2;
+			z-index: -4;
 			position: absolute;
 			border-bottom: 0 solid $pink;
 		}

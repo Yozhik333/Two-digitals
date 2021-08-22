@@ -186,39 +186,14 @@
 	width: 100%;
 	position: relative;
 	z-index: 1;
+	transition: background 0.2s ease-out;
 	&-wrap {
 		padding: 0 2em;
 		margin: 0 0 4em;
 		width: 34.5em;
-		&--black {
-			.consult-card {
-				background: $accent;
-				&__glas {
-					p {
-						color: #fff;
-					}
-				}
-				h2 {
-					color: #fff;
-				}
-				&__price {
-					h3 {
-						color: #fff;
-					}
-				}
-				ul {
-					li {
-						color: #fff;
-						.line-cube {
-							&::before,
-							&::after {
-								background: #dadada;
-							}
-						}
-					}
-				}
-			}
-		}
+	}
+	h2 {
+		transition: color 0.2s ease-out;
 	}
 	&__glas {
 		display: flex;
@@ -233,6 +208,7 @@
 			color: $accent;
 			font-size: 0.875em;
 			line-height: 1.7125em;
+			transition: color 0.2s ease-out;
 		}
 	}
 	&__price {
@@ -244,6 +220,7 @@
 			font-size: 1.75em;
 			line-height: 120%;
 			letter-spacing: -0.025em;
+			transition: color 0.2s ease-out;
 			span {
 				font-weight: bold;
 				font-size: 0.6em;
@@ -283,6 +260,37 @@
 		padding-left: 1.4em;
 		li {
 			margin: 0 0 1em;
+		}
+	}
+	&:hover {
+		background: $accent;
+		.consult-card__glas {
+			p {
+				color: #fff;
+			}
+		}
+		h2 {
+			color: #fff;
+		}
+		.consult-card__price {
+			h3 {
+				color: #fff;
+			}
+		}
+		ul {
+			li {
+				color: #fff;
+				.line-cube {
+					&::before,
+					&::after {
+						background: #dadada;
+					}
+				}
+			}
+		}
+		.btn {
+			background: rgb(251, 84, 124);
+			transition: 0.3s ease-out;
 		}
 	}
 
