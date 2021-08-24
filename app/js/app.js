@@ -1,7 +1,7 @@
 import Aos from 'aos';
 import IMask from 'imask';
-import Swiper, { Navigation } from 'swiper';
-Swiper.use([Navigation]);
+import Swiper, { Navigation, EffectFade, Pagination } from 'swiper';
+Swiper.use([Navigation, EffectFade, Pagination]);
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -190,6 +190,39 @@ document.addEventListener('DOMContentLoaded', () => {
 				slidesPerView: 2,
 			},
 		}
+	});
+
+	// About-page
+
+	const aboutSlider = new Swiper(".aboutSwiper", {
+		spaceBetween: 30,
+		effect: "fade",
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".about-pagination",
+			dynamicBullets: true,
+			paginationType: "custom",
+			paginationCustomRender: function (swiper, current, total) {
+				let names = [];
+				document.querySelector(".swiper-wrapper .swiper-slide").each(function (i) {
+					names.push(document.querySelector(this).data("name"));
+				});
+				let text = "<span style='background-color:black;padding:20px;'>";
+				for (let i = 1; i <= total; i++) {
+					if (current == i) {
+						text += "<span style='border-top:1px solid green;margin-right:4px;color:green;padding:10px;'>" + names[i] + "</span>";
+					} else {
+						text += "<span style='border-top:1px solid white;margin-right:4px;color:white;padding:10px;'>" + names[i] + "</span>";
+					}
+
+				}
+				text += "</span>";
+				return text;
+			}
+		},
 	});
 
 	//!

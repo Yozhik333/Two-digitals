@@ -10,6 +10,15 @@
 			}
 		}
 	}
+	@media (max-width: 1023px) {
+		.original-page-request {
+			.request {
+				h2 {
+					@include fluidFontSize(32px, 48px, 320px, 1023px);
+				}
+			}
+		}
+	}
 }
 .reputation-list-components {
 	padding: 9.1875em 1em 6.8125em;
@@ -164,6 +173,7 @@
 
 .reputation-calendar-block-illustration {
 	width: 44.375em;
+	//height: 38.8125em;
 	position: absolute;
 	right: -20em;
 	bottom: -3.5em;
@@ -175,9 +185,9 @@
 		bottom: auto;
 		top: -14em;
 		@media (max-width: 578px) {
-			width: 16.375em;
+			width: 14.375em;
 			right: -6em;
-			top: -11em;
+			top: -12em;
 		}
 	}
 }
