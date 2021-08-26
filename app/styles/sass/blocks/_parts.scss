@@ -1164,3 +1164,171 @@
 		}
 	}
 }
+
+.developing-page,
+.contacts-page {
+	position: relative;
+	background: #fff;
+	min-height: 100vh;
+	z-index: 1;
+	.colors-lines-1 {
+		top: 27.4375em;
+		left: -5.6875em;
+		.line-color {
+			&:nth-child(1) {
+				background: #fa406d;
+			}
+			&:nth-child(2) {
+				background: #292930;
+			}
+		}
+	}
+	.colors-lines-2 {
+		left: 13.4375em;
+		bottom: 4.375em;
+		.line-color {
+			&:nth-child(1) {
+				display: none;
+			}
+			&:nth-child(2) {
+				background: #fa406d;
+			}
+			&:nth-child(3) {
+				background: #fab8c4;
+			}
+		}
+	}
+	.colors-lines-3 {
+		right: -2em;
+		bottom: 4em;
+		.line-color {
+			&:nth-child(1) {
+				background: #fff;
+			}
+			&:nth-child(2) {
+				background: #fab8c4;
+			}
+			&:nth-child(3) {
+				background: #292930;
+			}
+		}
+	}
+	.watch,
+	.castle,
+	.coin-1,
+	.coin-2,
+	.search,
+	.lightning,
+	.this-link-1,
+	.this-link-2,
+	.this-link-1,
+	.this-link-2,
+	.this-link-3 {
+		position: absolute;
+		user-select: none;
+		pointer-events: none;
+		z-index: -1;
+	}
+	.watch {
+		width: 16.375em;
+		right: 10.6875em;
+		bottom: 3em;
+	}
+	.coin-1 {
+		width: 6.6875em;
+		right: 9.25em;
+		top: 18em;
+	}
+	.coin-2 {
+		width: 4.1875em;
+		left: 37.4375em;
+		bottom: 4.5625em;
+	}
+	.search {
+		width: 20.5em;
+		bottom: -1.375em;
+		left: 2.5em;
+	}
+	.castle {
+		width: 11em;
+		left: 2.5625em;
+		top: 15.6875em;
+	}
+	.lightning {
+		width: 4.25em;
+		top: 8.3125em;
+		left: 25.875em;
+	}
+	.this-link-1 {
+		width: 3em;
+		left: 56.8125em;
+		top: 9.8125em;
+	}
+	.this-link-2 {
+		width: 4.625em;
+		right: 1.4375em;
+		top: 28.8125em;
+	}
+	.this-link-3 {
+		width: 3.8125em;
+		left: 21.0625em;
+		bottom: 21.1875em;
+	}
+}
+
+.developing-web {
+	&-wrap {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__text {
+		h1 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+			font-size: 1.125em;
+			line-height: 1.6875em;
+			text-align: center;
+			color: #7c7e86;
+			margin: 1.375em 0 2.75em;
+		}
+	}
+	&__btns {
+		text-align: center;
+	}
+	@media (max-width: 1023px) {
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 2em;
+		padding: 2em 0;
+		&-wrap {
+			position: static;
+			padding: 4em 1em 8em;
+			transform: translate(0);
+		}
+		&__text {
+			h1 {
+				@include fluidFontSize(32px, 72px, 320px, 1023px);
+			}
+		}
+		&__btns {
+			.btn {
+				width: 100%;
+				&-pink {
+					margin: 1.5em 0 0;
+				}
+			}
+		}
+	}
+}
+
+.developing-images {
+	@media (max-width: 1023px) {
+		font-size: 0.7em;
+		@media (max-width: 578px) {
+			font-size: 0.5em;
+		}
+	}
+}
