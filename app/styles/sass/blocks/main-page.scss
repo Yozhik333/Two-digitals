@@ -112,8 +112,7 @@
 	left: 1em;
 	top: 4.6875em;
 	width: 4.375em;
-	animation: levitation 3s linear infinite;
-	animation-direction: reverse;
+	animation: levitation 6s linear infinite;
 }
 
 .main_cube4 {
@@ -122,15 +121,14 @@
 	width: 4.375em;
 	z-index: -1;
 	filter: blur(0.125em);
-	animation: levitation 4s linear infinite;
+	//animation: levitation 4s linear infinite;
 }
 
 .main_cube4-1 {
 	right: 1.875em;
 	top: 11.5625em;
 	width: 4.375em;
-	animation: levitation 3s linear infinite;
-	animation-direction: reverse;
+	//animation: levitation 3s linear infinite;
 }
 
 .main_cube2 {
@@ -138,15 +136,14 @@
 	bottom: 1.5em;
 	right: 20em;
 	width: 6.25em;
-	animation: levitation 4s linear infinite;
-	animation-direction: reverse;
+	//animation: levitation 4s linear infinite;
 }
 .serv-img-cube2 {
 	right: 12.5em;
 	top: 20em;
 	width: 9.375em;
 	z-index: 3;
-	animation: levitation 2s linear infinite reverse;
+	//animation: levitation 2s linear infinite reverse;
 }
 
 @keyframes eight {

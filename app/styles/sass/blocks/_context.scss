@@ -84,6 +84,46 @@
 	}
 }
 
+.context-orientir {
+	margin: 10.875em 0;
+	position: relative;
+	.secondary-block {
+		&__images {
+			width: 20%;
+			img {
+				width: 27.125em;
+				right: -15em;
+				top: 0;
+				position: absolute;
+				user-select: none;
+				pointer-events: none;
+			}
+		}
+	}
+	.cube-1 {
+		width: 4.1875em;
+		left: 2em;
+		bottom: -7em;
+	}
+	.cube-2 {
+		right: -6em;
+		top: -6em;
+		width: 5.875em;
+	}
+	@media (max-width: 1023px) {
+		margin: 4.875em 0;
+		.secondary-block {
+			&__images {
+				width: 100%;
+				img {
+					right: 0;
+					top: 2em;
+				}
+			}
+		}
+	}
+}
+
 .context-list-tasks {
 	.list-tasks {
 		.title-pink-line {
