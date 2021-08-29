@@ -1,0 +1,329 @@
+.main-quiz {
+	background: #242427;
+	border-radius: 2em;
+	padding: 10em 4.875em 9.4375em 5.875em;
+	display: flex;
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: "";
+		position: absolute;
+		clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 15% 15%, 16.5% 7%);
+		border-radius: 25% 2em 0 0 / 100% 2em 0 0em;
+		width: 31.59375em;
+		height: 24.9375em;
+		right: 0;
+		top: -3em;
+		z-index: -1;
+		background: linear-gradient(358.65deg, rgba(46, 46, 58, 0.0001) 19.87%, #32323f 76.32%);
+	}
+	&__left {
+		margin-right: 2em;
+		h2 {
+			color: #fff;
+		}
+		p {
+			color: #999fae;
+			margin: 2em 0 0;
+		}
+	}
+	.color-picker-black {
+		width: 9.6875em;
+		right: 4.25em;
+		top: 4em;
+		position: absolute;
+		user-select: none;
+		pointer-events: none;
+	}
+	.line-1 {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 53em;
+	}
+	.line-2 {
+		bottom: 20%;
+		left: 0;
+		z-index: -1;
+	}
+	.cube-1 {
+		width: 4.375em;
+		left: -2.625em;
+		top: 4.25em;
+	}
+	.cube-2 {
+		width: 5.75em;
+		bottom: 19.875em;
+		left: 23%;
+	}
+	.cube-3 {
+		width: 8.5em;
+		left: 5.875em;
+		bottom: 10.1875em;
+	}
+	.cube-4 {
+		width: 10em;
+		bottom: -6.25em;
+		right: 0;
+	}
+	@media (max-width: 1023px) {
+		flex-direction: column;
+		&__right {
+			margin: 2em 0 0;
+		}
+		.color-picker-black {
+			width: 7.6875em;
+			top: 20em;
+		}
+		@media (max-width: 578px) {
+			padding: 2em 1em 9.4375em;
+			.color-picker-black {
+				width: 6.6875em;
+				right: 0.25em;
+				top: 13em;
+			}
+		}
+	}
+}
+
+.quiz {
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 1.5em;
+	padding: 3em;
+	&-wrapper {
+		width: 42.125em;
+		height: 100%;
+	}
+	&__title {
+		h4 {
+			font-family: "Montserrat", sans-serif;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 0.875em;
+			line-height: 100%;
+			color: #fab8c4;
+			img {
+				width: 1.5em;
+				height: 1.5em;
+				margin: 0 0.875em 0.1em 0;
+			}
+		}
+		h6 {
+			margin: 0.3em 0 0.7em;
+		}
+	}
+	&-step {
+		&__btn {
+			margin: 0 0 1.5em;
+			display: none; // Здесь display:none Абдолла
+		}
+		&__checkbox-list {
+			display: none; // Здесь display:none Абдолла
+			flex-wrap: wrap;
+		}
+		&__radio-list {
+			display: none; // Здесь display:none Абдолла
+		}
+		//! quiz-step__form
+	}
+	&__btns {
+		margin: 3em 0 0;
+		display: flex;
+		justify-content: space-between;
+		button {
+			font-family: "Poppins", sans-serif;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 0.875em;
+			line-height: 1.3125em;
+			border-radius: 1.15em;
+			text-align: center;
+			padding: 1.0625em 2.0625em;
+			min-width: 10em;
+			transition: color 0.3s ease-out, background-color 0.3s ease-out, border 0.3s ease-out;
+			&.disable {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+		}
+		&-back {
+			border: 0.0625em solid #7c7e86;
+			color: #292930;
+			background-color: #fff;
+			&:hover {
+				color: #fa406d;
+				background: #fff2f4;
+				border: 0.0625em solid #fa406d;
+			}
+		}
+		&-next {
+			color: #fff;
+			background-color: #fa406d;
+			border: 0.375em solid rgba(250, 64, 109, 0);
+			&:hover {
+				background-color: lighten(#fa406d, 5%);
+				border: 0.375em solid rgba(250, 64, 109, 1);
+			}
+		}
+	}
+
+	//! quiz__radio
+	&__radio {
+		&:not(:last-child) {
+			margin: 0 0 1em;
+		}
+		label {
+			position: relative;
+			padding: 0.9em 0.9em 0.9em 3.5em;
+			cursor: pointer;
+			width: 100%;
+			background-color: #ffffff;
+			box-shadow: 0em 0.25em 1em rgba(33, 33, 50, 0.09);
+			border-radius: 0.9em;
+			color: #27272e;
+			font-family: "Poppins", sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.125em;
+			line-height: 1.6875em;
+			transition-duration: 0.28s;
+			transition-property: background-color, color;
+			&:hover {
+				color: $pink;
+			}
+		}
+
+		label::before,
+		label::after {
+			position: absolute;
+			border-radius: 50%;
+			content: "";
+		}
+
+		label::before {
+			width: 2em;
+			height: 2em;
+			border: none;
+			top: 50%;
+			left: 0.9em;
+			background-color: #d9dbe9;
+			transform: translateY(-50%);
+		}
+
+		label::after {
+			width: 1em;
+			height: 1em;
+			left: 1.4em;
+			top: 50%;
+			background-color: #f7f7fc;
+			transition-duration: 0.28s;
+			transition-property: transform, top;
+			transform: translateY(-50%) scale(0);
+		}
+
+		input[type="radio"] {
+			display: none;
+		}
+
+		input[type="radio"]:checked ~ label::before {
+			background-color: #fa406d;
+		}
+		input[type="radio"]:checked ~ label::after {
+			transform: translateY(-50%) scale(1);
+		}
+		input[type="radio"]:checked ~ label {
+			background-color: #27272e;
+			color: #fff;
+		}
+	}
+
+	//! quiz__checkbox
+	&__checkbox {
+		&:not(:last-child) {
+			margin: 0 1em 1em 0;
+		}
+		label {
+			position: relative;
+			padding: 0.9em 0.9em 0.9em 3.5em;
+			cursor: pointer;
+			width: 100%;
+			background-color: #ffffff;
+			box-shadow: 0em 0.25em 1em rgba(33, 33, 50, 0.09);
+			border-radius: 0.9em;
+			color: #27272e;
+			font-family: "Poppins", sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.125em;
+			line-height: 1.6875em;
+			transition-duration: 0.28s;
+			transition-property: background-color, color;
+			&:hover {
+				color: $pink;
+			}
+		}
+
+		label::before,
+		label::after {
+			position: absolute;
+			content: "";
+		}
+
+		label::before {
+			width: 2em;
+			height: 2em;
+			border: none;
+			top: 50%;
+			left: 0.9em;
+			border-radius: 0.25em;
+			background-color: #d9dbe9;
+			transform: translateY(-50%);
+		}
+
+		label::after {
+			width: 0.5em;
+			height: 0.8em;
+			left: 1.65em;
+			top: 47%;
+			border-right: 0.15em solid #fff;
+			border-bottom: 0.15em solid #fff;
+			transition-duration: 0.28s;
+			transition-property: transform;
+			transform: translateY(-50%) rotate(45deg) scale(0);
+		}
+
+		input[type="checkbox"] {
+			display: none;
+		}
+
+		input[type="checkbox"]:checked ~ label::before {
+			background-color: #fa406d;
+		}
+		input[type="checkbox"]:checked ~ label::after {
+			transform: translateY(-50%) rotate(45deg) scale(1);
+		}
+		input[type="checkbox"]:checked ~ label {
+			background-color: #27272e;
+			color: #fff;
+		}
+	}
+
+	@media (max-width: 1023px) {
+		&-wrapper {
+			width: 100%;
+		}
+		@media (max-width: 578px) {
+			padding: 1.5em 1em;
+			&-wrapper {
+				width: 100%;
+			}
+			&__title {
+				h6 {
+					font-size: 1.25em;
+				}
+			}
+		}
+	}
+}

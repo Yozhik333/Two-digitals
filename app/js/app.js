@@ -225,6 +225,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
+	new Swiper(".aboutNavigation", {
+		spaceBetween: 30,
+		slidesPerView: 8,
+		direction: "vertical",
+		simulateTouch: false,
+		centeredSlides: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".about-pagination",
+			dynamicBullets: true,
+			paginationType: "custom"
+		},
+	});
+
 	//!
 
 })
