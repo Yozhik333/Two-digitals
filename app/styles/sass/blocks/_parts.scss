@@ -134,6 +134,9 @@
 				}
 				a {
 					margin-left: 0;
+					width: 100%;
+					text-align: center;
+					display: block;
 				}
 				.btn {
 					margin: 0 0 1em;
@@ -173,11 +176,13 @@
 	&-wrap {
 		margin: 7.3125em 0;
 		position: relative;
-		.main_cube3 {
+		.cube-1 {
+			width: 3em;
 			left: 3.0275em;
 			top: 14em;
 		}
-		.main_cube9 {
+		.cube-2 {
+			width: 5.125em;
 			right: 3.0275em;
 			top: 31.625em;
 		}
@@ -229,6 +234,7 @@
 		}
 	}
 	@media (max-width: 1023px) {
+		margin-top: 3em;
 		&-wrap {
 			margin: 3.5em 0;
 			.line-1-pink {

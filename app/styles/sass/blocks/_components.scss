@@ -320,7 +320,7 @@
 	border-radius: 0.5em;
 	&::after {
 		content: "";
-		background-image: url("../images/dist/icons/arrow-down-light.svg");
+		background: url("../images/dist/icons/arrow-down-light.svg");
 		background-size: 40%;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -345,7 +345,7 @@
 	background-color: transparent;
 	opacity: 1;
 	&::after {
-		background-image: url("../images/dist/icons/arrow-down-dark.svg");
+		background: url("../images/dist/icons/arrow-down-dark.svg");
 		background-size: 40%;
 		background-repeat: no-repeat;
 		background-position: center;

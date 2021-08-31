@@ -58,6 +58,27 @@
 			top: 29.1875em;
 			right: 70%;
 		}
+		@media (max-width: 578px) {
+			.cube-1 {
+				width: 4.5em;
+				top: 5.5875em;
+				right: -2em;
+			}
+			.cube-2 {
+				top: 31%;
+				z-index: -1;
+			}
+			.cube-3 {
+				left: 0;
+				bottom: 5.5em;
+			}
+			.cube-4 {
+				right: 0;
+			}
+			.line-2 {
+				bottom: -23em;
+			}
+		}
 	}
 }
 .main-about-title {
@@ -92,6 +113,21 @@
 		height: 33.5em;
 		margin-left: -4.5em;
 	}
+	@media (max-width: 1023px) {
+		left: auto;
+		right: -3em;
+		top: 18.125em;
+		@media (max-width: 578px) {
+			top: 12.125em;
+			width: 7.4375em;
+			height: 9em;
+			img {
+				width: 8.5em;
+				height: auto;
+				margin-left: -2em;
+			}
+		}
+	}
 }
 
 // Санж, тебе сюда.
@@ -102,6 +138,9 @@
 	.container__text {
 		max-width: 48em;
 		position: relative;
+	}
+	@media (max-width: 1023px) {
+		padding: 15.25em 0 8.75em;
 	}
 }
 
@@ -139,6 +178,25 @@
 		bottom: -20em;
 		transform: rotate(45deg);
 	}
+	@media (max-width: 1023px) {
+		width: 100%;
+		left: 0;
+		bottom: auto;
+		top: -9em;
+		.swiper-button-prev {
+			top: -2.5em;
+			right: auto;
+			left: 1em;
+			transform: rotate(135deg);
+		}
+		.swiper-button-next {
+			top: -2.5em;
+			bottom: auto;
+			left: auto;
+			right: 1em;
+			transform: rotate(315deg);
+		}
+	}
 }
 
 .aboutNavigation {
@@ -167,6 +225,10 @@
 			width: max-content;
 			min-width: 6em;
 		}
+	}
+	@media (max-width: 1023px) {
+		width: 100%;
+		height: 7em;
 	}
 }
 
@@ -226,14 +288,42 @@
 		}
 	}
 	@media (max-width: 1023px) {
+		&::before {
+			width: 0.25em;
+			height: 1.1em;
+			left: 50%;
+			top: -10em;
+			transform: translateX(-50%);
+		}
+		&::after {
+			left: 50%;
+			top: -1.8em;
+			transform: translateX(-50%) rotate(90deg);
+			width: 3em;
+			height: 1.2em;
+			background-size: contain;
+			background-position: center;
+		}
 		.about-slide {
 			width: 100%;
 			height: 40em;
-			padding: 6.5em 20.625em 5.875em 4em;
+			padding: 4.5em 20.625em 5.875em 4em;
+			&__year {
+				span {
+					font-size: 4.5em;
+				}
+			}
 		}
 		@media (max-width: 578px) {
 			.about-slide {
 				padding: 6.5em 1.5em 5.875em 1.5em;
+				&__year {
+					top: 4.5em;
+					left: 0.5em;
+					span {
+						font-size: 3.5em;
+					}
+				}
 			}
 		}
 	}

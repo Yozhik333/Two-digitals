@@ -10,7 +10,7 @@
 		background-color: rgba(255, 255, 255, 0.97);
 		z-index: 11;
 		.header__container {
-			min-height: 5.8125em;
+			min-height: 4em;
 			&::after {
 				left: 0;
 				right: 0;
@@ -79,6 +79,9 @@
 	}
 	@media (max-width: 1023px) {
 		&.backToTop_visible {
+			.header__container {
+				padding: 0.5em 1em 0.5em 2.7em;
+			}
 			.back-for-logo {
 				top: 0;
 			}

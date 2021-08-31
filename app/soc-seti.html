@@ -1,6 +1,6 @@
 <!--#set var="title" value="Digital Agency - Комплексные решения" -->
 <!--#set var="phone-number" value="<div class='phone-number phone-dark'><a href='tel: +79009587658'><span>+7 900 958-76-58</span></a></div>" -->
-<!--#set var="btn" value="<button class='btn btn-black'>Заказать звонок</button>" -->
+<!--#set var="btn" value="<button href='#popup' class='btn btn-black popup-link'>Заказать звонок</button>" -->
 <!--#set var="iconMenu" value="<div class='menu__icon menu__icon--border-light'></div>" -->
 <!--#set var="headerLogo" value="<img src='images/dist/header/main-logo-black.svg' alt='Logo'>" -->
 <!--#include virtual="/parts/header.html" -->
@@ -16,8 +16,8 @@
 				<!--#set var="BC3" value="<li class='active'>SMM</li>" -->
 				<!--#set var="h1Text" value="Продвигайте свой бизнес через социальные сети" -->
 				<!--#set var="pText" value="Привлечём целевую аудиторию, повысим узнаваемость бренда и увеличим онлайн-продажи" -->
-				<!--#set var="mainBlockBtn1" value="<button class='btn btn-pink'>Оставить заявку</button>" -->
-				<!--#set var="viewCase" value="<a href='#'><img src='images/dist/icons/view-case-dark.svg' alt='Кейс'>Посмотреть кейсы</a>" -->
+				<!--#set var="mainBlockBtn1" value="<button href='#popup' class='btn btn-pink popup-link'>Оставить заявку</button>" -->
+				<!--#set var="viewCase" value="<a href='developing.html'><img src='images/dist/icons/view-case-dark.svg' alt='Кейс'>Посмотреть кейсы</a>" -->
 				<!--#include virtual="/parts/main-block.html" -->
 				<img class="soc-seti-illustration" src="images/dist/components/soc-seti-illustration.png" alt="Иллюстрация">
 				<img class="soc-seti-1" src="images/dist/icons/soc-insta.png" alt="Соц. сеть">
@@ -38,7 +38,7 @@
 
 	<div class="soc-seti-mini-banner-1 mini-banner-black-bg">
 		<!--#set var="miniBannerTextP" value="Сделаем первичный аудит вашего проекта в<br> Instagram, Facebook, ВКонтакте или Одноклассниках" -->
-		<!--#set var="miniBannerBtn" value="<a href='#' class='btn btn-white btn-mouse-pink'>Получить бесплатно</a>" -->
+		<!--#set var="miniBannerBtn" value="<a href='#popup' class='btn btn-white btn-mouse-pink popup-link'>Получить бесплатно</a>" -->
 		<!--#include virtual="/parts/mini-banner.html" -->
 	</div>
 	<!-- /.soc-ceti-mini-banner-1 -->
@@ -52,8 +52,8 @@
 				общей стратегии и выдавать лучшие результаты, проверять маркетинговые гипотезы, создавать контент и адаптировать
 				стратегию максимально быстро и точно</p>
 			<div class="secondary-block__info-links">
-				<button class="btn btn-black">Рассчитать стоимость</button>
-				<button class="btn btn-opacity">Узнать про комплексные услуги</button>
+				<button href="#popup" class="btn btn-black popup-link">Рассчитать стоимость</button>
+				<a href="complex.html" class="btn btn-opacity">Узнать про комплексные услуги</a>
 			</div>
 			<img class="lines line-dash-2" src="images/dist/components/line-dash-2.svg" alt="Line">
 			<img data-aos="fade-zoom-in" class="reputation-calendar-block-illustration"
@@ -126,7 +126,7 @@
 
 	<div class="soc-seti-mini-banner-2">
 		<!--#set var="miniBannerTextP" value="Ознакомьтесь с результатами наших<br> работ по ведению социальных сетей" -->
-		<!--#set var="miniBannerBtn" value="<a href='#' class='btn btn-black btn-mouse-white'>Посмотреть портфолио</a>" -->
+		<!--#set var="miniBannerBtn" value="<a href='developing.html' class='btn btn-black btn-mouse-white'>Посмотреть портфолио</a>" -->
 		<!--#include virtual="/parts/mini-banner.html" -->
 	</div>
 	<!-- /.soc-ceti-mini-banner-2 -->
@@ -250,7 +250,7 @@
 
 	<div class="soc-seti-mini-banner-3">
 		<!--#set var="miniBannerTextP" value="Ознакомьтесь с кейсами команды" -->
-		<!--#set var="miniBannerBtn" value="<a href='#' class='btn btn-black btn-mouse-pink'>Посмотреть портфолио</a>" -->
+		<!--#set var="miniBannerBtn" value="<a href='developing.html' class='btn btn-black btn-mouse-pink'>Посмотреть портфолио</a>" -->
 		<!--#include virtual="/parts/mini-banner.html" -->
 	</div>
 	<!-- /.soc-ceti-mini-banner-2 -->
@@ -274,6 +274,8 @@
 		<!--#include virtual="/parts/form.html" -->
 	</section>
 	<!-- /.original-page-request -->
+
+	<!--#include virtual="/parts/modal.html" -->
 
 </main>
 
