@@ -269,6 +269,7 @@
 	&__head {
 		background-repeat: no-repeat;
 		background-position: center;
+		background-size: contain;
 		width: 30.6875em;
 		height: 23.75em;
 		background-color: #fee2e6;
@@ -1172,6 +1173,7 @@
 }
 
 .developing-page,
+.error-404-page,
 .contacts-page {
 	position: relative;
 	background: #fff;
@@ -1331,10 +1333,64 @@
 }
 
 .developing-images {
+	user-select: none;
+	pointer-events: none;
 	@media (max-width: 1023px) {
 		font-size: 0.7em;
 		@media (max-width: 578px) {
 			font-size: 0.5em;
+		}
+	}
+}
+
+.error-404-page {
+	padding-top: 0;
+	.developing-images {
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: -7em;
+		bottom: 0;
+	}
+	.error-404__h1 {
+		color: $pink;
+		@include fluidFontSize(100px, 170px, 320px, 1920px);
+		font-weight: bold;
+		position: absolute;
+		left: 50%;
+		top: 10%;
+		transform: translate(-50%);
+		z-index: -1;
+	}
+	.error-404__title {
+		margin: 0 auto;
+		padding: 3em;
+		border-radius: 2em;
+		background-color: #f4faff;
+		text-align: center;
+		max-width: 50em;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		.developing-web__btns {
+			margin: 1em 0 0;
+		}
+	}
+	@media (max-width: 1023px) {
+		.error-404__h1 {
+			top: 0;
+		}
+		.error-404__title {
+			h2 {
+				@include fluidFontSize(24px, 48px, 320px, 1023px);
+			}
+		}
+		@media (max-width: 578px) {
+			.error-404__title {
+				padding: 1.5em;
+				width: 100%;
+			}
 		}
 	}
 }
