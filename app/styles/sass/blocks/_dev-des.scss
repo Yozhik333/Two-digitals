@@ -385,10 +385,12 @@
 	pointer-events: none;
 	right: 0;
 	bottom: 0;
-	width: 63.375em;
+	width: 67.375em;
+	height: 60.1875em;
 	@media (max-width: 1023px) {
 		top: -4em;
 		width: 53.525em;
+		height: auto;
 		@media (max-width: 578px) {
 			top: 0em;
 			width: 49.125em;

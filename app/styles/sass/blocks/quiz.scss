@@ -75,6 +75,14 @@
 			width: 7.6875em;
 			top: 20em;
 		}
+		.cube-2 {
+			bottom: auto;
+			top: -5em;
+			left: 50%;
+		}
+		.cube-3 {
+			bottom: 0;
+		}
 		@media (max-width: 578px) {
 			padding: 2em 1em 9.4375em;
 			.color-picker-black {
@@ -313,6 +321,9 @@
 	@media (max-width: 1023px) {
 		&-wrapper {
 			width: 100%;
+		}
+		&__btns {
+			margin: 1em 0 0;
 		}
 		@media (max-width: 578px) {
 			padding: 1.5em 1em;

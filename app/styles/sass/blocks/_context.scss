@@ -269,12 +269,20 @@
 			&__images {
 				width: 100%;
 				img {
-					right: 0;
+					right: 50%;
 					top: 2em;
+					width: 22.125em;
 				}
 			}
 		}
 		@media (max-width: 578px) {
+			.secondary-block {
+				&__images {
+					img {
+						right: 0;
+					}
+				}
+			}
 			.cube-1 {
 				bottom: 0;
 			}
