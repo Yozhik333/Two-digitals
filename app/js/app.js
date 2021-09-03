@@ -3,6 +3,9 @@ import IMask from 'imask';
 import Swiper, { Navigation, EffectFade, Pagination } from 'swiper';
 Swiper.use([Navigation, EffectFade, Pagination]);
 
+// import {hello} from './quiz';
+import './quiz.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	Aos.init({
@@ -383,47 +386,130 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Blog-post
 
 	let spisok_blog_class = [
-    '.blog-menu-rc', '.blog-menu-direct',
-    '.blog-menu-target', '.blog-menu-facebook',
-    '.blog-menu-vk', '.blog-menu-api',
-    '.blog-menu-resume'
-]
+		'.blog-menu-rc', '.blog-menu-direct',
+		'.blog-menu-target', '.blog-menu-facebook',
+		'.blog-menu-vk', '.blog-menu-api',
+		'.blog-menu-resume'
+	]
 
-// active class of menu items onscroll
-window.addEventListener('scroll', () => {
-    let scrollDistance = window.scrollY;
+	// active class of menu items onscroll
+	window.addEventListener('scroll', () => {
+		let scrollDistance = window.scrollY;
 
-    if (window.innerWidth > 500) {
-        document.querySelectorAll('.blog-post__text').forEach((el, i) => {
-            if (el.offsetTop - document.querySelector('.blogs__col-menu').clientHeight <= scrollDistance - 300) {
-                document.querySelectorAll('.sub-headings a').forEach((el) => {
-                    if (el.classList.contains('sub-headings-cubes')) {
-                        el.classList.remove('sub-headings-cubes');
-                    }
-                });
+		if (window.innerWidth > 500) {
+			document.querySelectorAll('.blog-post__text').forEach((el, i) => {
+				if (el.offsetTop - document.querySelector('.blogs__col-menu').clientHeight <= scrollDistance - 300) {
+					document.querySelectorAll('.sub-headings a').forEach((el) => {
+						if (el.classList.contains('sub-headings-cubes')) {
+							el.classList.remove('sub-headings-cubes');
+						}
+					});
 
-                document.querySelectorAll('.sub-headings')[i].querySelector('a').classList.add('sub-headings-cubes');
-            }
-        });
-    }
-});
+					document.querySelectorAll('.sub-headings')[i].querySelector('a').classList.add('sub-headings-cubes');
+				}
+			});
+		}
+	});
 
 	window.addEventListener('scroll', () => {
-    let scrollDistance = window.scrollY;
+		let scrollDistance = window.scrollY;
 
-    if (window.innerWidth > 500) {
-        document.querySelectorAll('.blog-post').forEach((el, i) => {
-            if (el.offsetTop - document.querySelector('.blogs__col-menu').clientHeight <= scrollDistance) {
-                document.querySelectorAll('.blogs__menu-headeer').forEach((el) => {
-                    if (el.classList.contains('sub-headings-color')) {
-                        el.classList.remove('sub-headings-color');
-                    }
-                });
+		if (window.innerWidth > 500) {
+			document.querySelectorAll('.blog-post').forEach((el, i) => {
+				if (el.offsetTop - document.querySelector('.blogs__col-menu').clientHeight <= scrollDistance) {
+					document.querySelectorAll('.blogs__menu-headeer').forEach((el) => {
+						if (el.classList.contains('sub-headings-color')) {
+							el.classList.remove('sub-headings-color');
+						}
+					});
 
-                document.querySelectorAll('.blogs__menu-headeer')[i].classList.add('sub-headings-color');
-            }
-        });
-    }
-});
+					document.querySelectorAll('.blogs__menu-headeer')[i].classList.add('sub-headings-color');
+				}
+			});
+		}
+	});
+
+	// flags
+	class ChangeFlag {
+		constructor(element) {
+			this.container = element;
+			this.flagsPhone = {
+				"RU": '+6(000)000-00-00',
+				"KZ": '+7(000)000-00-00',
+				"UA": '+8(000)000-00-00',
+				"BY": '+9(000)000-00-00',
+			}
+
+			this.container.querySelector('.div').innerHTML = "<input class='user-phone-mask' type='text' name='user-phone' id='user-phone'>"
+			this.container.querySelector('.user-phone-mask').placeholder = this.flagsPhone['RU'];
+			let phoneMask = IMask(
+				this.container.querySelector('.user-phone-mask'), {
+				mask: this.flagsPhone['RU']
+			});
+
+			this.start();
+
+			this.isOpen = true;
+
+			this.flagsWebSite = 'https://www.countryflags.io/';
+		}
+		start() {
+			this.container.querySelector('.request__form-change__flag').onclick = () => {
+				if (this.isOpen) {
+					this.container.querySelector('.request__form-change__flag').classList.add('open-change__flag');
+					this.isOpen = false;
+				}
+			};
+
+			document.addEventListener('click', (e) => {
+				if (e.target.nodeName != 'IMG') {
+					this.container.querySelector('.request__form-change__flag').classList.remove('open-change__flag');
+					this.isOpen = true;
+				}
+			})
+
+			this.container.querySelector('.request__form-change__flag').querySelectorAll('img').forEach(item => {
+				item.onclick = () => {
+					if (!this.isOpen) {
+						this.container.querySelector('.request__form-change__flag').querySelectorAll('img').forEach(img => {
+							img.style.order = 1;
+						});
+
+						item.style.order = 0;
+
+						this.container.querySelector('.request__form-change__flag').classList.remove('open-change__flag');
+
+						console.log(item.dataset.country)
+
+						this.container.querySelector('.div').innerHTML = "<input class='user-phone-mask' type='text' name='user-phone' id='user-phone'>"
+						this.container.querySelector('.user-phone-mask').placeholder = this.flagsPhone[item.dataset.country];
+
+						let phoneMask = IMask(
+							this.container.querySelector('.user-phone-mask'), {
+							mask: this.flagsPhone[item.dataset.country]
+						});
+
+						setTimeout(() => {
+							this.isOpen = true;
+						}, 200)
+					}
+				}
+			})
+
+		}
+	}
+
+
+	let changeFlag = document.querySelectorAll(".request__form");
+	changeFlag.forEach(item => {
+		new ChangeFlag(item);
+	});
+
+
+
+	// let phoneMask = IMask(
+	// 	document.getElementById('user-phone2'), {
+	// 		mask: '+{6}(000)000-00-00'
+	// });
 
 })

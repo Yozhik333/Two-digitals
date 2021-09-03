@@ -6,10 +6,10 @@
 		</div>
 		<!-- /.quiz__title -->
 		<div class="quiz-step">
-			<div class="quiz-step__btn">
-				<button class="btn btn-pink">Нет, перейти с расчету стоимость</button>
+			<div class="quiz-step__btn add-none">
+				<button class="btn btn-pink ">Нет, перейти с расчету стоимость</button>
 			</div>
-			<div class="quiz-step__checkbox-list">
+			<div class="quiz-step__checkbox-list add-none">
 				<div class="quiz__checkbox">
 					<input type="checkbox" id="quiz-checkbox-1">
 					<label for="quiz-checkbox-1">Контекстная реклама</label>
@@ -42,48 +42,62 @@
 			<!-- /.quiz-step__checkbox-list -->
 			<div class="quiz-step__radio-list">
 				<div class="quiz__radio">
-					<input type="radio" name="quizRadio" id="quiz-radio-1">
+					<input class="quiz__radio-input" value="Автоматизированный маркетинг" type="radio" name="quizRadio"
+						id="quiz-radio-1">
 					<label for="quiz-radio-1">Автоматизированный маркетинг</label>
 				</div>
 				<div class="quiz__radio">
-					<input type="radio" name="quizRadio" id="quiz-radio-2">
+					<input class="quiz__radio-input" value="Веб-разработка" type="radio" name="quizRadio" id="quiz-radio-2">
 					<label for="quiz-radio-2">Веб-разработка</label>
 				</div>
 				<div class="quiz__radio">
-					<input type="radio" name="quizRadio" id="quiz-radio-3">
+					<input class="quiz__radio-input" value="Дизайн" type="radio" name="quizRadio" id="quiz-radio-3">
 					<label for="quiz-radio-3">Дизайн</label>
 				</div>
 				<div class="quiz__radio">
-					<input type="radio" name="quizRadio" id="quiz-radio-4">
-					<label for="quiz-radio-4">Консультации с экспертами</label>
+					<input class="quiz__radio-input" value="Обучение" type="radio" name="quizRadio" id="quiz-radio-4">
+					<label for="quiz-radio-4">Обучение</label>
 				</div>
 				<div class="quiz__radio">
-					<input type="radio" name="quizRadio" id="quiz-radio-5">
+					<input class="quiz__radio-input" value="Комплексные решения" type="radio" name="quizRadio" id="quiz-radio-5">
 					<label for="quiz-radio-5">Комплексные решения</label>
 				</div>
 			</div>
 			<!-- /.quiz-step__radio-list -->
-			<div class="quiz-step__form">
+			<div class="quiz-step__form add-none request__form">
 				<form class="form" action="telegram.php" method="POST">
 					<div class="request__form-input">
 						<img src="images/dist/icons/iconly-input-human.svg" alt="Hitman">
 						<input type="text" name="user_name" placeholder="Ваше имя">
 					</div>
 					<div class="request__form-input">
-						<img src="images/dist/icons/russia.svg" alt="Флаг">
-						<input type="text" name="user-phone" id="user-phone" placeholder="+7(000)000-00-00">
+						<div class="request__form-change__flag">
+							<img src="https://www.countryflags.io/RU/shiny/64.png" data-country="RU" alt="Флаг">
+							<img src="https://www.countryflags.io/KZ/shiny/64.png" data-country="KZ" alt="Флаг">
+							<img src="https://www.countryflags.io/UA/shiny/64.png" data-country="UA" alt="Флаг">
+							<img src="https://www.countryflags.io/BY/shiny/64.png" data-country="BY" alt="Флаг">
+							<!-- <img src="images/dist/icons/russia.svg"  alt="Флаг"> -->
+						</div>
+						<div class="div">
+							<input class="user-phone-mask" type="text" name="user-phone" id="user-phone">
+						</div>
 					</div>
 					<div class="request__form-textarea">
 						<textarea name="user-text" id="user-text" cols="30" rows="10"
 							placeholder="Добавьте ваш комментарий"></textarea>
 					</div>
+					<!-- FIXME:You can delete the doc code -->
+					<input type="hidden" name="user-select_quiz" id="user-select_quiz">
+					<!-- FIXME:You can delete the doc code -->
+
+
 					<!--<button type="submit" class="btn btn-pink">Перезвоните мне</button>-->
 				</form>
 			</div>
 		</div>
 		<div class="quiz__btns">
 			<button class="quiz__btns-back disable">Назад</button>
-			<button class="quiz__btns-next">Далее</button>
+			<button class="quiz__btns-next disable">Далее</button>
 		</div>
 		<!-- /.quiz__btns -->
 	</div>

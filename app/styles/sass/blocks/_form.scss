@@ -376,3 +376,34 @@
 		}
 	}
 }
+
+//SCSS Abd
+
+.request__form-change__flag {
+	width: 2em;
+
+	overflow: hidden;
+
+	position: absolute;
+	height: 2em;
+	top: 1.5em;
+	left: 1.5em;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	padding-top: 15px;
+
+	img {
+		order: 1;
+		position: unset;
+		left: 0.25em;
+	}
+}
+
+.open-change__flag {
+	height: 6.5em;
+	background-color: #e63560;
+}

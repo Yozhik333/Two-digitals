@@ -1,10 +1,14 @@
-var element = document.getElementById('user-phone');
+var element1 = document.getElementById('user-phone-1');
+var element2 = document.getElementById('user-phone-2');
+var element3 = document.getElementById('user-phone-3');
 var maskOptions = {
 	mask: '+7(000)000-00-00',
 	lazy: false
 }
 
-var mask = new IMask(element, maskOptions);
+var mask1 = new IMask(element1, maskOptions);
+var mask2 = new IMask(element2, maskOptions);
+var mask3 = new IMask(element3, maskOptions);
 
 
 //// inputMask
