@@ -210,7 +210,7 @@
 		user-select: none;
 		pointer-events: none;
 		width: 43.4375em;
-		right: -6em;
+		right: -9em;
 		top: -9em;
 		@media (max-width: 1023px) {
 			width: 32.4375em;
@@ -218,6 +218,19 @@
 			top: 2em;
 			@media (max-width: 578px) {
 				right: -1.4em;
+			}
+		}
+	}
+}
+
+.email-logic {
+	.yandex-logic {
+		&__head {
+			h2 {
+				max-width: 14em;
+			}
+			.python-vector {
+				left: 31em;
 			}
 		}
 	}

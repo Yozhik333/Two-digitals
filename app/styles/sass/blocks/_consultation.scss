@@ -302,6 +302,11 @@
 		right: 2.5em;
 		width: 100%;
 		max-width: 25em;
+		background-image: none;
+		transition: background-color 0.2s ease-out;
+		&:hover {
+			background-color: $pink;
+		}
 	}
 	ul {
 		padding-left: 1.4em;

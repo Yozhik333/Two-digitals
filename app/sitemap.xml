@@ -19,7 +19,7 @@
     <loc>https://two-digitals.ru/brand.html</loc>
   </url>
 	<url>
-    <loc>https://two-digitals.ru/complex.html</loc>
+    <loc>https://two-digitals.ru/../services/complex.html</loc>
   </url>
 	<url>
     <loc>https://two-digitals.ru/consultation.html</loc>
@@ -43,7 +43,7 @@
     <loc>https://two-digitals.ru/developing.html</loc>
   </url>
 	<url>
-    <loc>https://two-digitals.ru/email.html</loc>
+    <loc>https://two-digitals.ru/../services/email.html</loc>
   </url>
 	<url>
     <loc>https://two-digitals.ru/form-style.html</loc>

@@ -45,6 +45,9 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 
 // GENERAL DOCUMENT STYLES
 
+:root {
+	scroll-behavior: auto;
+}
 //:root {
 //	font-size: calc(1vw + 1vh + 0.5vmin);
 //}

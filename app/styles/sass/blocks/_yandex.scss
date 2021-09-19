@@ -1,3 +1,11 @@
+.yandex-page {
+	.request {
+		.h2-64 {
+			padding-right: 0;
+		}
+	}
+}
+
 .yandex-main-block {
 	position: relative;
 	padding: 0 0 14em;
@@ -64,7 +72,7 @@
 			}
 			.cube-1 {
 				left: 20%;
-				top: 50%;
+				top: 55%;
 			}
 		}
 	}
@@ -273,7 +281,7 @@
 		display: flex;
 		align-items: center;
 		&-number {
-			width: 3.125em;
+			min-width: 3.125em;
 			height: 2.0625em;
 			background: #fa406d;
 			border-radius: 6.25em;
@@ -375,5 +383,56 @@
 		right: -12em;
 		bottom: -20em;
 		width: 40em;
+	}
+}
+
+.yandex-list-blocks {
+	.container {
+		max-width: 70em;
+	}
+	.list-blocks {
+		&__head {
+			.list-blocks-bell-flat {
+				right: 2.5em;
+			}
+		}
+		&__item {
+			&:nth-child(1) {
+				padding: 2.5em 8.25em 1.25em 17.3em;
+			}
+			&:nth-child(3) {
+				padding: 2.5em 8.25em 1.25em 17.3em;
+			}
+		}
+	}
+	@media (max-width: 1023px) {
+		.list-blocks {
+			&__head {
+				.list-blocks-bell-flat {
+					right: -2.5em;
+				}
+			}
+
+			&__item {
+				&:nth-child(1) {
+					padding: 2.5em 1.25em 1.25em 1em;
+				}
+				&:nth-child(3) {
+					padding: 2.5em 1.25em 1.25em 1em;
+				}
+			}
+		}
+		@media (max-width: 578px) {
+			.list-blocks {
+				&__item {
+					&:nth-child(1) {
+						padding: 0 0 1.25em;
+					}
+					&:nth-child(3) {
+						padding: 0 0 1.25em;
+					}
+				}
+			}
+		}
 	}
 }

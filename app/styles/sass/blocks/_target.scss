@@ -170,6 +170,9 @@
 				&-cube-1 {
 					bottom: 3em;
 				}
+				&-cube-2 {
+					right: -1em;
+				}
 				&-calendar,
 				&-clock {
 					display: block;
@@ -325,6 +328,13 @@
 				display: none;
 			}
 		}
+		&-links {
+			.btn-opacity {
+				display: inline-block;
+				margin-left: 0;
+				width: max-content;
+			}
+		}
 	}
 	.line-1-pink {
 		width: 40.0375em;
@@ -349,6 +359,12 @@
 		.main-block__info {
 			h1 {
 				@include fluidFontSize(42px, 72px, 320px, 1023px);
+			}
+
+			&-links {
+				.btn-opacity {
+					width: 100%;
+				}
 			}
 		}
 		@media (max-width: 578px) {

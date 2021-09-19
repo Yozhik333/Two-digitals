@@ -423,7 +423,7 @@
 	padding-bottom: 12.375em;
 	.main-block__info {
 		h1 {
-			max-width: 10em;
+			max-width: 12em;
 		}
 	}
 	.line-1-yellow {
@@ -845,7 +845,7 @@
 			margin: 0 0 1.5em;
 		}
 		h2 {
-			max-width: 16.5em;
+			max-width: 21.5em;
 		}
 		p {
 			margin: 2em 0 0;
@@ -996,7 +996,7 @@
 			&:nth-child(1) {
 				border-top: 0.0625em solid #e3e6e9;
 				border-right: 0.0625em solid #e3e6e9;
-				padding: 7em 8.25em 7em 8.5em;
+				padding: 7em 8.25em 7em 10.5em;
 			}
 			&:nth-child(2) {
 				border-top: 0.0625em solid #5956e9;
@@ -1006,12 +1006,12 @@
 				border-right: 0.0625em solid #e3e6e9;
 				border-bottom: 0.0625em solid #e3e6e9;
 				border-top: 0.0625em solid #5956e9;
-				padding: 7em 8.25em 7em 8.5em;
+				padding: 7em 5.25em 7em 10.5em;
 			}
 			&:nth-child(4) {
 				border-top: 0.0625em solid #e3e6e9;
 				border-bottom: 0.0625em solid #e3e6e9;
-				padding: 7em 8.25em 7em 5em;
+				padding: 7em 5.25em 7em 5em;
 			}
 		}
 		&:nth-child(1) {

@@ -44,6 +44,9 @@
 		.elips-for-logo-yellow {
 			display: none;
 		}
+		.elips-for-logo {
+			display: none;
+		}
 	}
 	&__logo {
 		width: 6.3125em;
@@ -96,6 +99,12 @@
 				display: block;
 				position: absolute;
 				top: 2.8em;
+				width: 6.3125em;
+				height: 3em;
+				img {
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 		&__container {
@@ -239,13 +248,30 @@
 
 .icon-cover-sub-list-svg {
 	position: absolute;
-	width: 2.5em;
-	height: 2.65563em;
 	left: 0;
 	img {
 		width: 100%;
 		height: 100%;
 	}
+}
+.icon-cover-mouse {
+	width: 2.5em;
+	height: 2.625em;
+}
+.icon-cover-complex {
+	width: 3em;
+	height: 2.7em;
+}
+.icon-cover-calendar {
+	width: 6.5em;
+	height: 3.575em;
+	margin-left: -1em;
+}
+.icon-cover-basket {
+	width: 6.8125em;
+	height: 7em;
+	margin-left: -3.4em;
+	margin-top: -0.8em;
 }
 
 //
@@ -625,6 +651,17 @@
 				}
 			}
 		}
+		&-center {
+			a {
+				color: $textcolor;
+				&:hover {
+					color: $grey-light;
+				}
+			}
+			.footer__privacy-sitemap {
+				margin-left: 1.5em;
+			}
+		}
 		.footer__container {
 			display: flex;
 			justify-content: space-between;
@@ -667,11 +704,21 @@
 			background-color: $accent;
 			margin-top: -0.1em;
 			&-right {
-				margin-bottom: 3em;
+				margin-bottom: 2em;
 			}
 			&-left {
 				& > span {
 					margin-left: 0;
+				}
+			}
+			&-center {
+				margin: 0 0 1em;
+				a {
+					display: block;
+					text-align: center;
+				}
+				.footer__privacy-sitemap {
+					margin: 1em 0 0;
 				}
 			}
 			.footer__container {

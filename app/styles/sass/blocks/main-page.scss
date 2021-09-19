@@ -202,26 +202,28 @@
 			}
 		}
 
-		.cube-1 {
-			left: 0em;
-			top: -2.3125em;
-		}
-		.cube-2 {
-			top: -11em;
-		}
-		.cube-3 {
-			right: 0;
-			top: 4.5625em;
-		}
-		.cube-4 {
-			top: auto;
-			right: 7.5em;
-			bottom: 14em;
-		}
-		.main_picker {
-			right: 41.85em;
-			top: auto;
-			bottom: 19em;
+		&-wrap {
+			.cube-1 {
+				left: 0em;
+				top: -2.3125em;
+			}
+			.cube-2 {
+				top: -11em;
+			}
+			.cube-3 {
+				right: 0;
+				top: 4.5625em;
+			}
+			.cube-4 {
+				top: auto;
+				right: 7.5em;
+				bottom: 14em;
+			}
+			.main_picker {
+				right: 41.85em;
+				top: auto;
+				bottom: 19em;
+			}
 		}
 		@media (max-width: 578px) {
 			&-wrap {
@@ -394,7 +396,7 @@
 	border-radius: 2em;
 	position: relative;
 	padding: 0.5em 0.625em;
-	transition: transform 0.2s ease-out;
+	//transition: transform 0.2s ease-out;
 	&::before {
 		border-radius: 2em;
 		background: #fff;
@@ -409,7 +411,6 @@
 		content: "";
 	}
 	&:hover {
-		transform: scale(1.02);
 		z-index: 4;
 		&::before {
 			background: $accent;
@@ -863,6 +864,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-image: url("../images/dist/preview.png");
 	h6 {
 		font-size: 3em;
 		color: #000;
@@ -884,8 +886,8 @@
 			@include fluidFontSize(22px, 36px, 320px, 1023px);
 		}
 		@media (max-width: 578px) {
-			padding: 9.5em 2em;
-			background-image: url("../images/dist/preview2.png") !important;
+			padding: 9.5em 2.5em;
+			background-image: url("../images/dist/preview2.png");
 			background-size: 100%;
 		}
 	}
@@ -902,7 +904,7 @@
 		margin: 6.25em 0;
 	}
 	&__left {
-		width: 22%;
+		width: 30%;
 		position: relative;
 		& > span {
 			display: block;
@@ -1014,6 +1016,7 @@
 			letter-spacing: -0.025em;
 			margin-left: 1.375em;
 			margin-right: 1.75em;
+			text-align: left;
 		}
 		&__content {
 			background: #ffffff;
@@ -1070,22 +1073,30 @@
 	}
 	@media (max-width: 1023px) {
 		padding: 0;
+		margin: 0 -0.3em;
 		@media (max-width: 578px) {
 			.accordion {
+				margin-top: auto;
+				&:not(:first-child) {
+					margin-top: 2em;
+				}
 				&__icon {
 					&-right {
-						right: 1.4em;
+						right: 0.75em;
 					}
 				}
 				&__control {
-					padding: 1em;
+					padding: 0.75em;
 				}
 				&__title {
-					margin-left: 0.375em;
-					margin-right: 1em;
+					margin-left: 1em;
+					margin-right: 1.5em;
+					font-size: 0.875em;
 				}
-				&__content {
-					padding: 2em 1em 1.5em;
+				&.open {
+					.accordion__content {
+						padding: 2em 1em 1.5em;
+					}
 				}
 			}
 		}

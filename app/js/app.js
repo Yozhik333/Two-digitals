@@ -84,28 +84,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	/* Для фиксации меню при скроле вниз */
-	window.addEventListener('DOMContentLoaded', function () {
-		const scrollUpButton = document.querySelector('.backToTop');
+	window.onscroll = function showHeader() {
+		var headerFixed = document.querySelector('.header');
 
-		if (scrollUpButton) {
-			scrollUpButton.addEventListener('click', function name() {
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth',
-				});
-			});
-
-			window.addEventListener('scroll', function () {
-				const scrolled = window.pageYOffset || document.documentElement.scrollTop;
-
-				if (scrolled >= 37) {
-					scrollUpButton.classList.add('backToTop_visible');
-				} else {
-					scrollUpButton.classList.remove('backToTop_visible');
-				}
-			});
+		if (window.pageYOffset > 50) {
+			headerFixed.classList.add('backToTop_visible');
+		} else {
+			headerFixed.classList.remove('backToTop_visible');
 		}
-	});
+	}
+
+	/* Для фиксации меню при скроле вниз */
+	//window.addEventListener('DOMContentLoaded', function () {
+	//	const scrollUpButton = document.querySelector('.backToTop');
+
+	//	if (scrollUpButton) {
+	//		scrollUpButton.addEventListener('click', function name() {
+	//			window.scrollTo({
+	//				top: 0,
+	//				behavior: 'smooth',
+	//			});
+	//		});
+
+	//		window.addEventListener('scroll', function () {
+	//			const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+	//			if (scrolled >= 37) {
+	//				scrollUpButton.classList.add('backToTop_visible');
+	//			} else {
+	//				scrollUpButton.classList.remove('backToTop_visible');
+	//			}
+	//		});
+	//	}
+	//});
 
 	// Аккордион
 
@@ -175,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const blogSlider = new Swiper('#blogSlider', {
 		loop: false,
 		slidesPerView: 2,
-		spaceBetween: 110,
+		spaceBetween: 30,
 		navigation: {
 			nextEl: '.blog-slider-next',
 			prevEl: '.blog-slider-prev',
@@ -434,10 +445,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		constructor(element) {
 			this.container = element;
 			this.flagsPhone = {
-				"RU": '+6(000)000-00-00',
-				"KZ": '+7(000)000-00-00',
-				"UA": '+8(000)000-00-00',
-				"BY": '+9(000)000-00-00',
+				"RU": '+7(000)000-00-00',
+				"KZ": '+77(000)000-00-00',
+				"UA": '+380(000)000-00-00',
+				"BY": '+375(000)000-00-00',
 			}
 
 			this.container.querySelector('.div').innerHTML = "<input class='user-phone-mask' type='text' name='user-phone' id='user-phone'>"
