@@ -122,7 +122,7 @@
 .design-page {
 	@media (max-width: 1023px) {
 		.blue-elips-big {
-			right: -22%;
+			right: 0;
 			top: 39.1875em;
 		}
 	}
@@ -833,6 +833,8 @@
 	position: relative;
 	&-wrap {
 		padding: 14.6875em 0 6em;
+		z-index: 1;
+		margin-top: -6em;
 		position: relative;
 	}
 	&__head {
@@ -875,6 +877,7 @@
 	@media (max-width: 1023px) {
 		&-wrap {
 			padding: 4.6875em 1em 0;
+			margin-top: -4em;
 		}
 		&__images {
 			right: -20em;

@@ -150,8 +150,17 @@
 			line-height: 100%;
 			text-align: center;
 			text-transform: uppercase;
+			position: relative;
 			a {
 				color: #999fae;
+				&::before {
+					content: "";
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					position: absolute;
+				}
 			}
 			&:hover {
 				background: $accent;
