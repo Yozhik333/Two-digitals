@@ -358,12 +358,13 @@
 		padding: 0;
 		.main-block__info {
 			h1 {
-				@include fluidFontSize(42px, 72px, 320px, 1023px);
-			}
-
-			&-links {
-				.btn-opacity {
-					width: 100%;
+				@include fluidFontSize(42px, 80px, 320px, 1023px);
+				strong {
+					span {
+						&::before {
+							width: 4.5em;
+						}
+					}
 				}
 			}
 		}
@@ -375,6 +376,13 @@
 				width: 26.0375em;
 				height: 31.12188em;
 				top: 28em;
+			}
+			.main-block__info {
+				&-links {
+					.btn-opacity {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
