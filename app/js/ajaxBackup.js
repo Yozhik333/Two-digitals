@@ -17,7 +17,7 @@ function registr() {
 
 	$.ajax({
 		type: "POST",
-		url: "./telegram.php", //"register_user.php",
+		url: "../telegram.php", //"register_user.php",
 		data: data,
 		dataType: 'html', //на всякий добавил тип ожидаемых данных
 		success: callback
@@ -44,7 +44,7 @@ function registr0() {
 
 	$.ajax({
 		type: "POST",
-		url: "./telegram2.php", //"register_user.php",
+		url: "../telegram2.php", //"register_user.php",
 		data: data2,
 		dataType: 'html', //на всякий добавил тип ожидаемых данных
 		success: callback0
@@ -71,7 +71,7 @@ function registr3() {
 
 	$.ajax({
 		type: "POST",
-		url: "./telegram2.php", //"register_user.php",
+		url: "../telegram2.php", //"register_user.php",
 		data: data2,
 		dataType: 'html', //на всякий добавил тип ожидаемых данных
 		success: callback3
@@ -98,7 +98,7 @@ function registr4() {
 
 	$.ajax({
 		type: "POST",
-		url: "./telegram.php", //"register_user.php",
+		url: "../telegram.php", //"register_user.php",
 		data: data2,
 		dataType: 'html', //на всякий добавил тип ожидаемых данных
 		success: callback4
@@ -106,6 +106,6 @@ function registr4() {
 }
 
 function callback4(response) {
-	$(".request__form2").addClass("response");
+	$(".request__form").addClass("response");
 }
 
