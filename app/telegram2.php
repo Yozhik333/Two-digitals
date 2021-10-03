@@ -1,10 +1,11 @@
 <?php
 
-$name = $_POST['user_name'];
+$name = $_POST['user_name2'];
 
 
 $phone = $_POST['user-phone'];
 
+$user_select = $_POST['user-select_quiz'];
 // if ($nameSelect == 'ru') {
 //  $phone = $phone1;
 // }
@@ -17,15 +18,18 @@ $phone = $_POST['user-phone'];
 // if ($nameSelect == 'be') {
 //  $phone = $phone4;
 // }
-$message = $_POST['user-text'];
+$message = $_POST['user-text2'];
 // $token = "1871761928:AAGGhcA-TjASr9f4ZvtNaH6rZ4coGwUkdVA";
 $token = "2003994206:AAE756gdX0BLI6zM7AHgHGWWcLDjeDxcMJU";
 // $chat_id = "-477008159";
 $chat_id = "-513681295";
+
+
 $arr = array(
  'Имя пользователя: ' => $name,
  'Телефон: ' => $phone,
- 'Вопрос' => $message
+ 'Вопрос' => $message,
+ 'Ответы' => $user_select
 );
 
 foreach($arr as $key => $value) {

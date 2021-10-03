@@ -38,6 +38,7 @@
 	"dependencies": {
 		"aos": "^2.3.4",
 		"imask": "^6.1.0",
+		"jquery": "^3.6.0",
 		"swiper": "^6.8.0"
 	}
 }

@@ -22,8 +22,9 @@ let quizContent = {
 }
 
 class Quiz{
-    constructor(element){
+    constructor(element, i){
         this.container = element;
+        this.quizIndex = i;
 
         this.direction = true;
         this.directionTitle = '';
@@ -33,6 +34,17 @@ class Quiz{
     }
 
     start(){
+
+        this.container.querySelector(".form").id = "form__call-do"+this.quizIndex;
+
+        this.container.querySelectorAll(".quiz__radio").forEach((item, i)=> {
+            item.querySelector('input').id = "quiz"+ (this.quizIndex) +"-radio-"+(i+1);
+            // item.querySelector('label').for = "quiz-radio-2";
+            item.querySelector('label').setAttribute('for', 'quiz'+ (this.quizIndex) +'-radio-'+(i+1));
+        });
+
+
+
         this.container.querySelectorAll(".quiz__radio-input").forEach(item => {
             item.addEventListener("click", ()=>{
                 this.container.querySelector('.quiz__btns-next').classList.remove('disable');
@@ -163,8 +175,8 @@ class Quiz{
                 let content = '';
                 for(let i = 0; i < quizContent[item.value].length; i++){
                     content += "<div class='quiz__checkbox'> \
-					                <input type='checkbox' id='quiz-checkbox-"+(i+1)+"'> \
-					                <label for='quiz-checkbox-"+(i+1)+"'>"+quizContent[item.value][i]+"</label> \
+					                <input type='checkbox' id='quiz"+ (this.quizIndex) +"-checkbox-"+(i+1)+"'> \
+					                <label for='quiz"+ (this.quizIndex) +"-checkbox-"+(i+1)+"'>"+quizContent[item.value][i]+"</label> \
 				                </div>"
                 }
                 this.container.querySelector('.quiz-step__checkbox-list').innerHTML = content;
@@ -196,8 +208,8 @@ class Quiz{
                 let content = '';
                 for(let i = 0; i < quizContent[last].length; i++){
                     content += "<div class='quiz__checkbox'> \
-					                <input type='checkbox' id='quiz-checkbox-"+(i+1)+"'> \
-					                <label for='quiz-checkbox-"+(i+1)+"'>"+quizContent[last][i]+"</label> \
+					                <input type='checkbox' id='quiz"+ (this.quizIndex) +"-checkbox-"+(i+1)+"'> \
+					                <label for='quiz"+ (this.quizIndex) +"-checkbox-"+(i+1)+"'>"+quizContent[last][i]+"</label> \
 				                </div>"
                 }
                 this.container.querySelector('.quiz-step__checkbox-list').innerHTML = content;
@@ -230,6 +242,6 @@ class Quiz{
 
 
 let quiz = document.querySelectorAll(".quiz");
-quiz.forEach(item => {
-    new Quiz(item);
+quiz.forEach((item, i) => {
+    new Quiz(item, i);
 })

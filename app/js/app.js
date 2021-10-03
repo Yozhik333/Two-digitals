@@ -5,6 +5,7 @@ Swiper.use([Navigation, EffectFade, Pagination]);
 
 // import {hello} from './quiz';
 import './quiz.js'
+import './ajaxBackup.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
