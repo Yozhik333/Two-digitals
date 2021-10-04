@@ -30,10 +30,17 @@
 		margin: 2.5em 0 0;
 	}
 	&__form {
-		width: 28.125em;
+		width: 100%;
+		position: relative;
+		&-wrap {
+			width: 28.125em;
+		}
 		form {
 			display: flex;
 			flex-direction: column;
+		}
+		.form {
+			transition: opacity 0.3s ease-out;
 		}
 		&-input {
 			margin: 0 0 1em;
@@ -96,6 +103,67 @@
 		}
 		.btn-pink {
 			width: 100%;
+		}
+		.request__form-thanks {
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			margin-top: 3em;
+			margin-bottom: 3em;
+			transition: opacity 1s ease-out;
+			h6 {
+				text-align: center;
+			}
+			p {
+				text-align: center;
+				margin: 1em 0;
+				color: #525260;
+				font-size: 1.1em;
+			}
+			&-number {
+				p {
+					color: #525260;
+					font-size: 1.1em;
+					span {
+						color: $pink;
+					}
+				}
+			}
+			@media (max-width: 1023px) {
+				h6 {
+					font-size: 1.5em;
+				}
+				p {
+					font-size: 1.3em;
+				}
+				&-number {
+					p {
+						font-size: 1.3em;
+					}
+				}
+			}
+		}
+		&.response {
+			& > h6 {
+				visibility: hidden;
+				opacity: 0;
+				position: absolute;
+			}
+			.form {
+				visibility: hidden;
+				opacity: 0;
+				position: absolute;
+			}
+			.request__form-privacy {
+				visibility: hidden;
+				opacity: 0;
+				position: absolute;
+			}
+			.request__form-thanks {
+				visibility: visible;
+				opacity: 1;
+				position: relative;
+			}
 		}
 	}
 	&__contacts {
