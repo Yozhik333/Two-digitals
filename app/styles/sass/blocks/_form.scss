@@ -206,6 +206,9 @@
 		}
 		&__form {
 			width: 100%;
+			&-wrap {
+				width: auto;
+			}
 		}
 		@media (max-width: 578px) {
 			padding: 4.5em 2em;
@@ -275,6 +278,9 @@
 		}
 		&__form {
 			width: 100%;
+			&-wrap {
+				width: auto;
+			}
 			.form {
 				flex-direction: row;
 				.btn {
